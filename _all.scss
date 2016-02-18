@@ -9,6 +9,7 @@
 
 // Tools
 @import "sass-mq/mq";
+@import "tools/typography";
 
 // Generic
 @import "generic/box-sizing";
@@ -17,6 +18,8 @@
 @import "generic/vertical-rhythm";
 
 // Base
+@import "base/page";
+@import "base/typography";
 @import "base/links";
 
 // Objects
@@ -24,3 +27,4 @@
 
 // Utils
 @import "utils/clearfix";
+@import "utils/typography";

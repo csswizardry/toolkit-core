@@ -3,8 +3,24 @@
 // =============================================================================
 
 $base-font-size: 18px !default;
-//$base-line-height:  29px !default;
+$base-line-height: 1.6 !default;
 
-$base-font-family: SkyText, Helvetica, Arial, Sans-Serif !default;
+$base-font-family: Sky Text, Helvetica, Arial, sans-serif !default;
 
-$base-spacing-unit: $base-font-size !default;
+$base-spacing-unit: 20px !default;
+
+/* Fonts
+   =========================================== */
+
+@font-face {
+  font-family: "Sky Text";
+  src: url("//assets.sky.com/fonts/sky_regular.ttf") format("truetype"),
+       url("//assets.sky.com/fonts/sky_regular.svg#sky_regular") format("svg");
+}
+
+@font-face {
+  font-family: "Sky Text";
+  src: url("//assets.sky.com/fonts/sky_medium.ttf") format("truetype"),
+       url("//assets.sky.com/fonts/sky_medium.svg#sky_medium") format("svg");
+  font-weight: bold;
+}
