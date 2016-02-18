@@ -1,0 +1,34 @@
+{
+  "name": "sky-toolkit-core",
+  "version": "0.0.1",
+  "description": "The core framework of Sky's web toolkit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "stylelint ./**/*.scss --syntax scss",
+    "build": "cat _all.scss | node-sass --include-path node_modules/ --output-style compressed > dist/toolkit-core.css"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sky-uk/toolkit-core.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sky-uk/toolkit-core/issues"
+  },
+  "homepage": "https://github.com/sky-uk/toolkit-core#readme",
+  "dependencies": {
+    "sass-mq": "^3.2.6"
+  },
+  "devDependencies": {
+    "node-sass": "^3.4.2",
+    "pre-commit": "^1.1.2",
+    "stylelint": "^4.3.5",
+    "stylelint-selector-bem-pattern": "^0.2.1",
+    "stylelint-statement-max-nesting-depth": "^2.0.1"
+  }
+}

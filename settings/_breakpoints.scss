@@ -1,0 +1,12 @@
+// =============================================================================
+// SETTINGS / BREAKPOINTS
+// =============================================================================
+
+// Breakpoint variables for use with sass-mq
+
+$mq-breakpoints: (
+  small:   320px,
+  medium:  740px,
+  large:   980px,
+  x-large: 1300px
+);

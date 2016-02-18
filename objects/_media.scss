@@ -1,0 +1,22 @@
+/* ==========================================================================
+   OBJECTS / MEDIA
+   ========================================================================== */
+
+/** @define o-media */
+
+.o-media {
+  @extend %u-clearfix;
+}
+
+.o-media__body {
+  @include mq($from: medium) {
+    overflow: hidden;
+  }
+}
+
+.o-media__img {
+  @include mq($from: medium) {
+    float: left;
+    margin-right: $base-spacing-unit * 2;
+  }
+}
