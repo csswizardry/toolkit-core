@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo 'No tests'",
     "lint": "stylelint ./**/*.scss --syntax scss",
-    "build": "cat _all.scss | node-sass --include-path node_modules/ --output-style compressed > dist/toolkit-core.css"
+    "build": "cat _all.scss | node-sass --include-path node_modules/ --output-style compressed > dist/toolkit-core.css",
+    "build-circle": "mkdir dist && npm run build"
   },
   "pre-commit": [
     "lint"
