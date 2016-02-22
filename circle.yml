@@ -1,0 +1,16 @@
+machine:
+  node:
+    version: 5.1.0
+
+general:
+  artifacts:
+    - "dist/"
+    - "package.json"
+
+test:
+  post:
+    - npm run build
+
+notify:
+  webhooks:
+    - url: http://orion.cf.sky.com/orion/builds/circleci

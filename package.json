@@ -4,7 +4,7 @@
   "description": "The core framework of Sky's web toolkit",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo 'No tests'",
     "lint": "stylelint ./**/*.scss --syntax scss",
     "build": "cat _all.scss | node-sass --include-path node_modules/ --output-style compressed > dist/toolkit-core.css"
   },
@@ -23,6 +23,11 @@
   "homepage": "https://github.com/sky-uk/toolkit-core#readme",
   "dependencies": {
     "sass-mq": "^3.2.6"
+  },
+  "orion": {
+    "default": {
+      "stylesheet": "dist/toolkit-core.css"
+    }
   },
   "devDependencies": {
     "node-sass": "^3.4.2",
