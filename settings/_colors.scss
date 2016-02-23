@@ -13,7 +13,7 @@ $colors: (
   white:     #fff
 );
 
-$gradient: (
+$gradients: (
   large: (
     end: #cdccd4,
     mid: #fff
@@ -23,27 +23,3 @@ $gradient: (
     mid: #fff
   )
 );
-
-// Function to get color instead of using map-get
-// http://www.sitepoint.com/using-sass-maps/
-
-// Seperate to a functions file?
-@function color($key) {
-  @if map-has-key($colors, $key) {
-    @return map-get($colors, $key);
-  }
-
-  @warn "Unknown `#{$key}` in $colors.";
-  @return null;
-}
-
-// Seperate to a functions file?
-@function gradient($name, $variant:null) {
-  @if ($variant != null) {
-    @return map-get(map-get($gradient, $name), $variant);
-  }
-
-  @else {
-    @return map-get($gradient, $name);
-  }
-}

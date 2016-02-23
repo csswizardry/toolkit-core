@@ -18,7 +18,7 @@
 //
 
 html {
-  @include background-gradient(gradient(small, end), gradient(small, mid), "linear");
+  @include background-gradient("small");
   font-size: $base-font-size;
   font-family: $base-font-family;
   line-height: $base-line-height;
@@ -31,6 +31,6 @@ html {
   -webkit-font-smoothing: antialiased;
 
   @include mq($from: medium) {
-    @include background-gradient(gradient(large, end), gradient(large, mid), "linear");
+    @include background-gradient("large");
   }
 }
