@@ -18,15 +18,19 @@
 //
 
 html {
+  @include background-gradient("small");
   font-size: $base-font-size;
   font-family: $base-font-family;
   line-height: $base-line-height;
-  background: white;
-  color: black;
+  color: color(text);
   overflow-y: scroll;
   min-height: 100%;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+
+  @include mq($from: medium) {
+    @include background-gradient("large");
+  }
 }

@@ -1,0 +1,25 @@
+// =============================================================================
+// SETTINGS / COLORS
+// =============================================================================
+
+$colors: (
+  brand:     #0072c9,
+  highlight: #4d9ed6,
+  error:     #d0021b,
+  success:   #299934,
+  keyline:   #c0c0c0,
+  text:      #4a4a4a,
+  black:     #000,
+  white:     #fff
+);
+
+$gradients: (
+  large: (
+    end: #cdccd4,
+    mid: #fff
+  ),
+  small: (
+    end: #f2f2f5,
+    mid: #fff
+  )
+);
