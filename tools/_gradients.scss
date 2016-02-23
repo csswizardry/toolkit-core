@@ -1,0 +1,21 @@
+// =============================================================================
+// TOOLS / GRADIENTS
+// =============================================================================
+
+@mixin background-gradient($endColor, $midColor, $orientation:null) {
+  background: $endColor;
+  // If orientation is defined as linear (or undefined), output linear gradient
+  @if $orientation == "linear" or $orientation == null {
+    background: -moz-linear-gradient(left, $endColor 0%, $midColor 50%, $endColor 100%);
+    background: -webkit-linear-gradient(left, $endColor 0%, $midColor 50%, $endColor 100%);
+    background: linear-gradient(to right, $endColor 0%, $midColor 50%, $endColor 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="$endColor", endColorstr="$midColor", GradientType=1);
+  }
+  // If orientation is defined as radial, output radial gradient
+  @else if $orientation == "radial" {
+    background: -moz-radial-gradient(center, ellipse cover, $endColor 0%, $midColor 50%, $endColor 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, $endColor 0%, $midColor 50%, $endColor 100%);
+    background: radial-gradient(ellipse at center, $endColor 0%, $midColor 50%, $endColor 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="$endColor", endColorstr="$midColor", GradientType=1);
+  }
+}

@@ -4,12 +4,14 @@
 
 // Settings
 @import "settings/config";
+@import "settings/colors";
 @import "settings/typography";
 @import "settings/breakpoints";
 
 // Tools
 @import "sass-mq/mq";
 @import "tools/typography";
+@import "tools/gradients";
 
 // Generic
 @import "generic/box-sizing";
