@@ -1,0 +1,33 @@
+// =============================================================================
+// TOOLS / FUNCTIONS
+// =============================================================================
+
+// $gradients map reader
+// ===========================================
+
+// Function to get gradient values instead of using nested map-gets
+@function gradient($key, $variant:null) {
+  @if map-has-key($gradients, $key) {
+    @if ($variant != null) {
+      @return map-get(map-get($gradients, $key), $variant);
+    }
+
+    @return map-get($gradients, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $gradients.";
+  @return null;
+}
+
+// $colors map reader
+// ===========================================
+
+// Function to get color instead of using map-get
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $colors.";
+  @return null;
+}
