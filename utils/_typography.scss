@@ -36,3 +36,10 @@
 .u-text-caption {
   @include font-size($text-caption);
 }
+
+/* Align utilities
+   =========================================== */
+
+.u-align-right {
+  text-align: right;
+}
