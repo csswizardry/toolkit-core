@@ -1,0 +1,63 @@
+// =============================================================================
+// TEST / TOOLS / FUNCTIONS
+// =============================================================================
+
+@import "../../tools/functions";
+
+// Test configuration
+// ===========================================
+
+@mixin functions_before() {
+  $gradients: (
+    testKey: (
+      end: #000,
+      mid: #fff
+    )
+  ) !global;
+
+  $colors: (
+    testColor: #bada55
+  ) !global;
+}
+
+// $gradients map reader
+// ===========================================
+
+@include test-module("Gradient map reader") {
+  @include functions_before();
+
+  @include test("should return an end hex value for given key") {
+    $actual: gradient("testKey", end);
+    $expected: #000;
+
+    @include assert-equal($actual, $expected);
+  }
+
+  @include test("should return a mid hex value for given key") {
+    $actual: gradient("testKey", mid);
+    $expected: #fff;
+
+    @include assert-equal($actual, $expected);
+  }
+
+  @include test("should return an end hex if no variant is provided") {
+    $actual: gradient("testKey");
+    $expected: #000;
+
+    @include assert-equal($actual, $expected);
+  }
+}
+
+// $colors map reader
+// ===========================================
+
+@include test-module("Color map reader") {
+  @include functions_before();
+
+  @include test("should return a hex value for given key") {
+    $actual: color("testColor");
+    $expected: #bada55;
+
+    @include assert-equal($actual, $expected);
+  }
+}

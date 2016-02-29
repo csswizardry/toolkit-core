@@ -1,0 +1,9 @@
+@import "true";
+
+// Import Test files
+@import "tools/functions";
+@import "tools/typography";
+@import "tools/gradients";
+
+// Run the tests
+@include report();

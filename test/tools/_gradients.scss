@@ -1,0 +1,78 @@
+// =============================================================================
+// TEST / TOOLS / GRADIENTS
+// =============================================================================
+
+@import "../../tools/gradients";
+
+// Test configuration
+// ===========================================
+
+@mixin gradients_before {
+  $gradients: (
+    testKey: (
+      end: #000,
+      mid: #fff
+    )
+  ) !global;
+}
+
+// Font size mixin
+// ===========================================
+
+@include test-module("@background-gradient mixin") {
+  @include gradients_before();
+
+  @include test("should return a linear gradient for the given key") {
+    @include assert("compiles linear gradient") {
+      @include input {
+        @include background-gradient(testKey, "linear");
+      }
+
+      @include expect {
+        background: #000;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000", endColorstr="#fff", GradientType=1);
+        background: -webkit-gradient(left top, right top, color-stop(0%, #000), color-stop(50%, #fff), color-stop(100%, #000));
+        background: -webkit-linear-gradient(left, #000 0%, #fff 50%, #000 100%);
+        background: -moz-linear-gradient(left, #000 0%, #fff 50%, #000 100%);
+        background: -o-linear-gradient(left, #000 0%, #fff 50%, #000 100%);
+        background: linear-gradient(to right, #000 0%, #fff 50%, #000 100%);
+      }
+    }
+  }
+
+  @include test("should return a linear gradient if no orientation is provided") {
+    @include assert("compiles linear gradient") {
+      @include input {
+        @include background-gradient(testKey);
+      }
+
+      @include expect {
+        background: #000;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000", endColorstr="#fff", GradientType=1);
+        background: -webkit-gradient(left top, right top, color-stop(0%, #000), color-stop(50%, #fff), color-stop(100%, #000));
+        background: -webkit-linear-gradient(left, #000 0%, #fff 50%, #000 100%);
+        background: -moz-linear-gradient(left, #000 0%, #fff 50%, #000 100%);
+        background: -o-linear-gradient(left, #000 0%, #fff 50%, #000 100%);
+        background: linear-gradient(to right, #000 0%, #fff 50%, #000 100%);
+      }
+    }
+  }
+
+  @include test("should return a radial gradient for the given key") {
+    @include assert("compiles linear gradient") {
+      @include input {
+        @include background-gradient(testKey, "radial");
+      }
+
+      @include expect {
+        background: #000;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000", endColorstr="#fff", GradientType=1);
+        background: -webkit-gradient(radial, center center, 0, center center, 100%, color-stop(0%, #fff), color-stop(100%, #000));
+        background: -webkit-radial-gradient(center, circle cover, #fff 0%, #000 100%);
+        background: -moz-radial-gradient(center, circle cover, #fff 0%, #000 100%);
+        background: -o-radial-gradient(center, circle cover, #fff 0%, #000 100%);
+        background: radial-gradient(center, circle cover, #fff 0%, #000 100%);
+      }
+    }
+  }
+}
