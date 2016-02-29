@@ -6,7 +6,7 @@
 // ===========================================
 
 // Function to get gradient values instead of using nested map-gets
-@function gradient($key, $variant:null) {
+@function gradient($key, $variant:end) {
   @if map-has-key($gradients, $key) {
     @if ($variant != null) {
       @return map-get(map-get($gradients, $key), $variant);

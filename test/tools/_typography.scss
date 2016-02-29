@@ -1,0 +1,62 @@
+// =============================================================================
+// TEST / TOOLS / TYPOGRAPHY
+// =============================================================================
+
+@import "../../tools/typography";
+
+// Test configuration
+// ===========================================
+
+@mixin typography_before {
+  $base-font-size: 18px !global;
+  $base-line-height: 1.6 !global;
+}
+
+// Font size mixin
+// ===========================================
+
+@include test-module("@font-size mixin") {
+  @include typography_before();
+
+  @include test("should return font size in pixels and rems") {
+    @include assert("pixels and rems should be compiled") {
+      @include input {
+        @include font-size(18px);
+      }
+
+      @include expect {
+        font-size: 18px;
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+    }
+  }
+
+  @include test("should return the provided line height") {
+    @include assert("line height should be compiled") {
+      @include input {
+        @include font-size(18px, 1.8);
+      }
+
+      @include expect {
+        font-size: 18px;
+        font-size: 1rem;
+        line-height: 1.8;
+      }
+    }
+  }
+
+  @include test("should return $base-line-height if none is provided") {
+    @include assert("line height should fall back") {
+      @include input {
+        @include font-size(18px);
+      }
+
+      @include expect {
+        font-size: 18px;
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+    }
+  }
+}
