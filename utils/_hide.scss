@@ -5,3 +5,7 @@
 .u-hide-visually {
   @include hide-visually();
 }
+
+.u-hide-completely {
+  @include hide-completely();
+}
