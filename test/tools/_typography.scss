@@ -9,7 +9,7 @@
 
 @mixin typography_before {
   $base-font-size: 18px !global;
-  $base-line-height: 1.6 !global;
+  $base-line-height: 24px !global;
 }
 
 // Font size mixin
@@ -27,7 +27,7 @@
       @include expect {
         font-size: 18px;
         font-size: 1rem;
-        line-height: 1.6;
+        line-height: 1.33333;
       }
     }
   }
@@ -42,20 +42,6 @@
         font-size: 18px;
         font-size: 1rem;
         line-height: 1.8;
-      }
-    }
-  }
-
-  @include test("should return $base-line-height if none is provided") {
-    @include assert("line height should fall back") {
-      @include input {
-        @include font-size(18px);
-      }
-
-      @include expect {
-        font-size: 18px;
-        font-size: 1rem;
-        line-height: 1.6;
       }
     }
   }
