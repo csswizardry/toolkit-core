@@ -6,16 +6,8 @@ table {
   width: 100%;
 }
 
-tr {
-  border-bottom: 1px solid color(keyline);
-}
-
 th,
 td {
-  padding: $base-spacing-unit / 2;
-  font-weight: normal;
-  text-align: left;
-  vertical-align: top;
 
   // Remove outside padding for the left-side
   &:first-child {
