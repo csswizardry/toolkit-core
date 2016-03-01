@@ -7,7 +7,7 @@ a {
   text-decoration: none;
   cursor: pointer;
 
-  &:hover {
+  @include hocus() {
     text-decoration: underline;
   }
 }
