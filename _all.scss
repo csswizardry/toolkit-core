@@ -12,6 +12,7 @@
 @import "sass-mq/mq";
 @import "tools/functions";
 @import "tools/mixins";
+@import "tools/font-face";
 @import "tools/typography";
 @import "tools/gradients";
 
@@ -34,4 +35,4 @@
 
 // Utils
 @import "utils/clearfix";
-@import "utils/typography";
+@import "utils/hide";
