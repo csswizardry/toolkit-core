@@ -1,0 +1,16 @@
+/* ==========================================================================
+   OBJECTS / LIST-INLINE
+   ========================================================================== */
+
+/**
+* The list-block object displays any list of items into stacked blocks.
+*/
+
+.o-list-block {
+  margin-left: 0;
+  list-style: none;
+}
+
+.o-list-block__item {
+  display: block;
+}
