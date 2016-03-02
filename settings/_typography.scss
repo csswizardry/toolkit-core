@@ -2,29 +2,35 @@
 // SETTINGS / TYPOGRAPHY
 // =============================================================================
 
-$base-font-size: 18px !default;
-$base-line-height: 1.6 !default;
+// Global typography settings.
+// ==============================================
+
+$base-font-size: 22px !default;
+$base-line-height: 30px !default;
 
 $base-font-family: Sky Text, Helvetica, Arial, sans-serif !default;
 
-$base-spacing-unit: 20px !default;
+// Heading-level typography
+// ==============================================
 
-/* Fonts
-   =========================================== */
+$text-alpha: 62px !default;
+$text-beta: 48px !default;
+$text-gamma: 36px !default;
+$text-delta: 28px !default;
 
-@font-face {
-  font-family: "Sky Text";
-  src: url("//orion-production-herokuapp-com.global.ssl.fastly.net/fonts/sky_regular.eot");
-  src: url("//orion-production-herokuapp-com.global.ssl.fastly.net/fonts/sky_regular.woff") format("woff"),
-       url("//orion-production-herokuapp-com.global.ssl.fastly.net/fonts/sky_regular.ttf") format("truetype"),
-       url("//orion-production-herokuapp-com.global.ssl.fastly.net/fonts/sky_regular.svg#sky_regular") format("svg");
-}
+// Text-level typography
+// ==============================================
 
-@font-face {
-  font-family: "Sky Text";
-  src: url("//orion-production-herokuapp-com.global.ssl.fastly.net/fonts/sky_medium.eot");
-  src: url("//orion-production-herokuapp-com.global.ssl.fastly.net/fonts/sky_medium.woff") format("woff"),
-       url("//orion-production-herokuapp-com.global.ssl.fastly.net/fonts/sky_medium.ttf") format("truetype"),
-       url("//orion-production-herokuapp-com.global.ssl.fastly.net/fonts/sky_medium.svg#sky_medium") format("svg");
-  font-weight: bold;
+$text-body: $base-font-size;
+$text-body-small: 18px !default;
+$text-caption: 14px !default;
+
+// WARNING
+// Private/framework-only reassignment. Do not alter anything below.
+$spacing-unit: $base-line-height;
+$spacing-unit-small: round(0.5 * $spacing-unit);
+$spacing-unit-large: round(2   * $spacing-unit);
+
+@if ($spacing-unit != $base-line-height) {
+  @error "The value of `$spacing-unit` must not be changed.";
 }

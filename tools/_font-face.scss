@@ -1,0 +1,20 @@
+// =============================================================================
+// TOOLS / FONTFACE
+// =============================================================================
+
+@font-face {
+  font-family: "Sky Text";
+  src: url("//orion-production-herokuapp-com.global.ssl.fastly.net/fonts/sky_regular.eot");
+  src: url("//orion-production-herokuapp-com.global.ssl.fastly.net/fonts/sky_regular.woff") format("woff"),
+       url("//orion-production-herokuapp-com.global.ssl.fastly.net/fonts/sky_regular.ttf") format("truetype"),
+       url("//orion-production-herokuapp-com.global.ssl.fastly.net/fonts/sky_regular.svg#sky_regular") format("svg");
+}
+
+@font-face {
+  font-family: "Sky Text";
+  src: url("//orion-production-herokuapp-com.global.ssl.fastly.net/fonts/sky_medium.eot");
+  src: url("//orion-production-herokuapp-com.global.ssl.fastly.net/fonts/sky_medium.woff") format("woff"),
+       url("//orion-production-herokuapp-com.global.ssl.fastly.net/fonts/sky_medium.ttf") format("truetype"),
+       url("//orion-production-herokuapp-com.global.ssl.fastly.net/fonts/sky_medium.svg#sky_medium") format("svg");
+  font-weight: bold;
+}

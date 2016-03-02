@@ -5,11 +5,9 @@
 /** @define o-container */
 
 .o-container {
-  width: 92.5%;
-  max-width: 63.33rem; // 1140px
-  margin: 0 auto;
-
-  @include mq($from: medium) {
-    width: 85%;
-  }
+  max-width: 1140px;
+  padding-right: $spacing-unit;
+  padding-left: $spacing-unit;
+  margin-right: auto;
+  margin-left: auto;
 }

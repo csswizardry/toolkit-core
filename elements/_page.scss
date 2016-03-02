@@ -1,5 +1,5 @@
 /* ==========================================================================
-   BASE / PAGE
+   ELEMENTS / PAGE
    ========================================================================== */
 
 //
@@ -19,9 +19,9 @@
 
 html {
   @include background-gradient("small");
-  font-size: $base-font-size;
+  font-size: ($base-font-size / 16px) * 1em;
+  line-height: $base-line-height / $base-font-size;
   font-family: $base-font-family;
-  line-height: $base-line-height;
   color: color(text);
   overflow-y: scroll;
   min-height: 100%;

@@ -1,7 +1,13 @@
 /* ==========================================================================
-   UTILS / TYPOGRAPHY
+   ELEMENTS / LINKS
    ========================================================================== */
 
-.u-text-constrain {
-  max-width: 30em;
+a {
+  color: color(brand);
+  text-decoration: none;
+  cursor: pointer;
+
+  @include hocus() {
+    text-decoration: underline;
+  }
 }

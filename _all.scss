@@ -11,6 +11,8 @@
 // Tools
 @import "sass-mq/mq";
 @import "tools/functions";
+@import "tools/mixins";
+@import "tools/font-face";
 @import "tools/typography";
 @import "tools/gradients";
 
@@ -21,10 +23,11 @@
 @import "generic/vertical-rhythm";
 
 // Base
-@import "base/page";
-@import "base/typography";
-@import "base/tables";
-@import "base/links";
+@import "elements/page";
+@import "elements/typography";
+@import "elements/links";
+@import "elements/tables";
+@import "elements/images";
 
 // Objects
 @import "objects/container";
@@ -33,4 +36,5 @@
 
 // Utils
 @import "utils/clearfix";
+@import "utils/hide";
 @import "utils/typography";

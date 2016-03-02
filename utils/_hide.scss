@@ -1,13 +1,11 @@
 /* ==========================================================================
-   BASE / LINKS
+   UTILS / HIDE
    ========================================================================== */
 
-a {
-  color: color(brand);
-  text-decoration: none;
-  cursor: pointer;
+.u-hide-visually {
+  @include hide-visually();
+}
 
-  &:hover {
-    text-decoration: underline;
-  }
+.u-hide-completely {
+  @include hide-completely();
 }

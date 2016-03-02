@@ -1,0 +1,28 @@
+// =============================================================================
+// TOOLS / MIXINS
+// =============================================================================
+
+// Generate `:hover` and `:focus` styles in one go.
+// http://www.456bereastreet.com/archive/201004/whenever_you_use_hover_also_use_focus/
+@mixin hocus() {
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
+
+// Visually hide content
+@mixin hide-visually() {
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+}
+
+@mixin hide-completely() {
+  display: none !important;
+}
