@@ -13,4 +13,7 @@ pre {
   margin-bottom: $spacing-unit;
 }
 
-// TODO: Sections and Articles?
+ul, ol,
+dd {
+  margin-left: $spacing-unit;
+}
