@@ -37,7 +37,7 @@
  * We can also manipulate entire layout systems by adding a series of Modifiers
  * to the `.o-layout` Block. For example:
  *
- *   <div class="o-layout  o-layout--rev">
+ *   <div class="o-layout  o-layout--reverse">
  *
  * This will reverse the displayed order of the system so that it runs in the
  * opposite order to our source, effectively flipping the system over.
@@ -45,7 +45,7 @@
  *   <div class="o-layout  o-layout--[right|center]">
  *
  * This will cause the system to fill up from either the centre or the right
- * hand side. Default behaviour is to full up the layout system from the left.
+ * hand side. Default behaviour is to fill up the layout system from the left.
  *
  * There are plenty more options available to us: explore them below.
  */
@@ -56,7 +56,7 @@
 $use-markup-fix: false !default;
 
 // We can redefine a spacing unit here if we want to use the layout system as a
-// standalone object. If we don’t define anything new. this will simply default
+// standalone object. If we don’t define anything new this will simply default
 // back to whaever spacing unit the project uses.
 $spacing-unit: 24px !default;
 
