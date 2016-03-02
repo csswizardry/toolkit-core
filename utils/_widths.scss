@@ -1,0 +1,55 @@
+/* ==========================================================================
+   UTILS / WIDTHS
+   ========================================================================== */
+
+@mixin widths($widths-columns, $widths-breakpoint: null) {
+
+  // Loop through the number of columns for each denominator of our fractions.
+  @each $widths-denominator in $widths-columns {
+
+    // Begin creating a numberator for our fraction up until we hit the
+    // denominator.
+    @for $widths-numerator from 1 through $widths-denominator {
+
+      // Build a class in the format `.u-3/4` or `.u-3-of-4`.
+      .u-#{$widths-numerator}\/#{$widths-denominator}#{$widths-breakpoint} {
+        width: ($widths-numerator / $widths-denominator) * 100% !important;
+      }
+
+      // PUSH
+      .u-push-#{$widths-numerator}\/#{$widths-denominator}#{$widths-breakpoint} {
+        position: relative;
+        left: ($widths-numerator / $widths-denominator) * 100% !important;
+      }
+
+      // PULL
+      .u-pull-#{$widths-numerator}\/#{$widths-denominator}#{$widths-breakpoint} {
+        position: relative;
+        right: ($widths-numerator / $widths-denominator) * 100% !important;
+      }
+
+    }
+
+  }
+
+}
+
+@include widths(1 2 3 4 5);
+
+@each $alias, $bp in $mq-breakpoints {
+  @include mq($from: $bp) {
+    @include widths(1 2 3 4 5, \@#{$alias});
+  }
+}
+
+// @media screen and (min-width: 720px) {
+//   @include widths(1 2 3 4 5, \@sm);
+// }
+//
+// @media screen and (min-width: 1024px) {
+//   @include widths(1 2 3 4 5, \@md);
+// }
+//
+// @media screen and (min-width: 1200px) {
+//   @include widths(1 2 3 4 5, \@lg);
+// }

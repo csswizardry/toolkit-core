@@ -1,0 +1,90 @@
+/* ==========================================================================
+   OBJECTS / LAYOUT
+   ========================================================================== */
+
+$use-markup-fix: false !default;
+$spacing-unit: 24px !default;
+
+.o-layout {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  margin-left: -$spacing-unit;
+
+  @if ($use-markup-fix == false) {
+    font-size: 0;
+  }
+
+}
+
+.o-layout__item {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: $spacing-unit;
+
+  @if ($use-markup-fix == false) {
+    //font-size: 1rem;
+    @include font-size($base-font-size);
+  }
+
+}
+
+.o-layout--narrow {
+  margin-left: round(-$spacing-unit / 2);
+
+  > .o-layout__item {
+    padding-left: round($spacing-unit / 2);
+  }
+
+}
+
+.o-layout--wide {
+  margin-left: round(-$spacing-unit * 2);
+
+  > .o-layout__item {
+    padding-left: round($spacing-unit * 2);
+  }
+
+}
+
+.o-layout--flush {
+  margin-left: 0;
+
+  > .o-layout__item {
+    padding-left: 0;
+  }
+
+}
+
+.o-layout--middle {
+
+  > .o-layout__item {
+    vertical-align: middle;
+  }
+
+}
+
+.o-layout--bottom {
+
+  > .o-layout__item {
+    vertical-align: bottom;
+  }
+
+}
+
+.o-layout--reverse {
+  direction: rtl;
+
+  > .o-layout__item {
+    direction: ltr;
+  }
+
+}
+
+.o-layout--reverse > [class*=u-push],
+.o-layout--reverse > [class*=u-pull] {
+  outline: 10px solid red;
+}
