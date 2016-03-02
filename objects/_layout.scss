@@ -75,6 +75,24 @@ $spacing-unit: 24px !default;
 
 }
 
+.o-layout--center {
+  text-align: center;
+
+  > .o-layout__item {
+    text-align: left;
+  }
+
+}
+
+.o-layout--right {
+  text-align: right;
+
+  > .o-layout__item {
+    text-align: left;
+  }
+
+}
+
 .o-layout--reverse {
   direction: rtl;
 
@@ -84,7 +102,26 @@ $spacing-unit: 24px !default;
 
 }
 
-.o-layout--reverse > [class*=u-push],
-.o-layout--reverse > [class*=u-pull] {
-  outline: 10px solid red;
+.o-layout--spaced {
+
+  > .o-layout__item {
+    margin-bottom: $spacing-unit;
+  }
+
+}
+
+.o-layout--spaced-narrow {
+
+  > .o-layout__item {
+    margin-bottom: round($spacing-unit / 2);
+  }
+
+}
+
+.o-layout--spaced-wide {
+
+  > .o-layout__item {
+    margin-bottom: round($spacing-unit * 2);
+  }
+
 }

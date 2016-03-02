@@ -12,7 +12,7 @@
     @for $widths-numerator from 1 through $widths-denominator {
 
       // Build a class in the format `.u-3/4` or `.u-3-of-4`.
-      .u-#{$widths-numerator}\/#{$widths-denominator}#{$widths-breakpoint} {
+      .u-width-#{$widths-numerator}\/#{$widths-denominator}#{$widths-breakpoint} {
         width: ($widths-numerator / $widths-denominator) * 100% !important;
       }
 
