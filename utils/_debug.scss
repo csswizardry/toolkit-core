@@ -1,0 +1,16 @@
+/* ==========================================================================
+   UTILS / DEBUG
+   ========================================================================== */
+
+/**
+ * Warn people when they try to manipulate layout items in grids that are
+ * already reversed.
+ */
+.o-layout--reverse {
+
+  > [class*=u-push],
+  > [class*=u-pull] {
+    outline: 10px solid red;
+  }
+
+}
