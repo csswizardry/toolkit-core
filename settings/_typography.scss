@@ -28,6 +28,7 @@ $text-caption: 14px !default;
 // WARNING
 // Private/framework-only reassignment. Do not alter anything below.
 $spacing-unit: $base-line-height;
+$spacing-unit-tiny: round(0.25 * $spacing-unit);
 $spacing-unit-small: round(0.5 * $spacing-unit);
 $spacing-unit-large: round(2   * $spacing-unit);
 
