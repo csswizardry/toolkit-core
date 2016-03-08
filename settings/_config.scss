@@ -9,6 +9,12 @@ $config: (
   debug: false,
 );
 
+// Little helper function to retreive information from our config array. E.g.:
+//
+//   @if (config(debug) == true) {
+//     ...
+//   }
+//
 @function config($key) {
   @return map-get($config, $key);
 }

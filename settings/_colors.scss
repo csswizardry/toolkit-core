@@ -2,6 +2,15 @@
 // SETTINGS / COLORS
 // =============================================================================
 
+// Our brand and project colours are held in maps. Access these colours using:
+//
+//   color($KEY)
+//
+// For example:
+//
+//   .foo {
+//     color: color(brand);
+//   }
 $colors: (
   brand:     #0072c9,
   highlight: #73add8,
