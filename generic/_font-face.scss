@@ -1,7 +1,11 @@
-// =============================================================================
-// TOOLS / FONTFACE
-// =============================================================================
+/* ==========================================================================
+   TOOLS / FONTFACE
+   ========================================================================== */
 
+/**
+ * Define our custom `@font-face` rules here in order to use them later on in
+ * the project.
+ */
 @font-face {
   font-family: "Sky Text";
   src: url("//orion-production-herokuapp-com.global.ssl.fastly.net/fonts/sky_regular.eot");
