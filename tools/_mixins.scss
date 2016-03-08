@@ -11,7 +11,8 @@
   }
 }
 
-// Visually hide content
+// Visually hide content, leaving it accessible to screenreaders and ATs.
+// http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
 @mixin hide-visually() {
   border: 0 !important;
   clip: rect(0 0 0 0) !important;
@@ -23,6 +24,8 @@
   width: 1px !important;
 }
 
+// Completely hide content both visually from the screen, and from screenreaders
+// and ATs.
 @mixin hide-completely() {
   display: none !important;
 }
