@@ -2,18 +2,21 @@
    GENERIC / VERTICAL RHYTHM
    ========================================================================== */
 
-// Margin bottom and all that
-
-h1,h2,h3,h4,h5,h6,hgroup,
-ul,ol,dl,
-blockquote,p,address,
+/**
+ * Apply our base spacing unit as a `margin-bottom` to all block level elements
+ * so that we get nice and consistent vertical rhythm very cheaply.
+ * http://csswizardry.com/2012/06/single-direction-margin-declarations/
+ */
+h1, h2, h3, h4, h5, h6, hgroup,
+ul, ol, dl,
+blockquote, p, address,
 table,
-fieldset,figure,
+fieldset, figure,
 pre {
   margin-bottom: $spacing-unit;
 }
 
-ul, ol,
+ul,  ol,
 dd {
   margin-left: $spacing-unit;
 }
