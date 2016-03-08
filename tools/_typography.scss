@@ -6,7 +6,7 @@
 // single value, e.g.:
 //
 // .foo {
-//     @include inuit-font-size(12px);
+//     @include font-size(12px);
 // }
 //
 // This will generate a rem-based font-size with its pixel fallback, as well as
@@ -18,11 +18,11 @@
 //     line-height: 2;
 // }
 //
-// If you do not want inuitcss to generate you a line-height automatically, you
-// simply pass in your own as a second paramater:
+// If you do not want to generate you a line-height automatically, you simply
+// pass in your own as a second paramater:
 //
 // .foo {
-//     @include inuit-font-size(12px, 1.5);
+//     @include font-size(12px, 1.5);
 // }
 //
 // This will yield:
@@ -37,7 +37,7 @@
 // a line-height at all, pass in a second paramater of ‘none’ or ‘false’:
 //
 // .foo {
-//     @include inuit-font-size(12px, none);
+//     @include font-size(12px, none);
 // }
 //
 // This will yield:
