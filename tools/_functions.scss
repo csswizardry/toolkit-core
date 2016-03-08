@@ -5,7 +5,7 @@
 // $gradients map reader
 // ===========================================
 
-// Function to get gradient values instead of using nested map-gets
+// Function to get gradient values instead of using nested `map-gets`.
 @function gradient($key, $variant:end) {
   @if map-has-key($gradients, $key) {
     @if ($variant != null) {
@@ -22,7 +22,7 @@
 // $colors map reader
 // ===========================================
 
-// Function to get color instead of using map-get
+// Function to get color instead of using `map-get`.
 @function color($key) {
   @if map-has-key($colors, $key) {
     @return map-get($colors, $key);
