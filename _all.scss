@@ -16,7 +16,6 @@
  *                      throughout the rest of the project.
  * Functions............A collection of custom Sass functions.
  * Mixins...............A collection of custom Sass mixins.
- * Font-face............Our @font-face definitions for custom fonts.
  * Typography...........Mixins specifically for helping with setting type.
  * Gradients............Mixins specifically for helping with creating gradients.
  *
@@ -27,6 +26,7 @@
  *                      to zero.
  * Vertical Rhythm......Define common vertical spacing across all block-level
  *                      elements in one go.
+ * Font-face............Our @font-face definitions for custom fonts.
  *
  * ELEMENTS
  * Page.................Set up our HTML and/or BODY elements.
@@ -75,7 +75,6 @@
 @import "sass-mq/mq";
 @import "tools/functions";
 @import "tools/mixins";
-@import "tools/font-face";
 @import "tools/typography";
 @import "tools/gradients";
 
@@ -84,6 +83,7 @@
 @import "generic/normalize";
 @import "generic/reset";
 @import "generic/vertical-rhythm";
+@import "generic/font-face";
 
 // Elements
 @import "elements/page";
