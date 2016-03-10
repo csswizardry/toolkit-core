@@ -96,10 +96,10 @@ $global-spacing-unit: 24px !default;
  * Smaller gutters between items.
  */
 .o-layout--narrow {
-  margin-left: round(-$global-spacing-unit / 2);
+  margin-left: $global-spacing-unit-small;
 
   > .o-layout__item {
-    padding-left: round($global-spacing-unit / 2);
+    padding-left: $global-spacing-unit-small;
   }
 
 }
@@ -108,10 +108,10 @@ $global-spacing-unit: 24px !default;
  * Larger gutters between items.
  */
 .o-layout--wide {
-  margin-left: round(-$global-spacing-unit * 2);
+  margin-left: -$global-spacing-unit-large;
 
   > .o-layout__item {
-    padding-left: round($global-spacing-unit * 2);
+    padding-left: $global-spacing-unit-large;
   }
 
 }
@@ -278,7 +278,7 @@ $global-spacing-unit: 24px !default;
   &.o-layout--narrow {
 
     > .o-layout__item {
-      margin-bottom: round($global-spacing-unit / 2);
+      margin-bottom: $global-spacing-unit-small;
     }
 
   }
@@ -286,7 +286,7 @@ $global-spacing-unit: 24px !default;
   &.o-layout--wide {
 
     > .o-layout__item {
-      margin-bottom: round($global-spacing-unit * 2);
+      margin-bottom: $global-spacing-unit-large;
     }
 
   }
