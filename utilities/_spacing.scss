@@ -12,7 +12,7 @@
  *   .u-padding-all {}
  */
 
-$directions: (
+$spacing-directions: (
   null,
   -top,
   -right,
@@ -20,19 +20,19 @@ $directions: (
   -left,
 );
 
-$properties: (
+$spacing-properties: (
   padding,
   margin
 );
 
-$sizes: (
+$spacing-sizes: (
   null: $spacing-unit,
   -small: $spacing-unit-small,
   -large: $spacing-unit-large,
-);
+) !default;
 
-@each $property in $properties {
-  @each $direction in $directions {
+@each $property in $spacing-properties {
+  @each $direction in $spacing-directions {
 
     // This is a bit nasty… If we have a `null` direction, the implication is that
     // we want to use the respective property on all sides (TRBL). Accordingly,
@@ -43,7 +43,7 @@ $sizes: (
       $all: -all;
     }
 
-    @each $size, $value in $sizes {
+    @each $size, $value in $spacing-sizes {
 
       .u-#{$property}#{$direction}#{$all}#{$size} {
         #{$property}#{$direction}: $value !important;
