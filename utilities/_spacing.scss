@@ -2,6 +2,16 @@
    UTILITIES / SPACING
    ========================================================================== */
 
+/**
+ * Utility classes to put specific spacing values onto elements. The below loop
+ * will generate us a suite of classes like:
+ *
+ *   .u-margin-top {}
+ *   .u-padding-left-large {}
+ *   .u-margin-right-small {}
+ *   .u-padding {}
+ */
+
 $directions: (
   null,
   -top,
@@ -21,12 +31,26 @@ $sizes: (
   -large: $spacing-unit-large,
 );
 
-@each $direction in $directions {
-  @each $property in $properties {
+@each $property in $properties {
+  @each $direction in $directions {
+
+    // This is a bit nasty… If we have a `null` direction, the implication is that
+    // we want to use the respective property on all sides (TRBL). Accordingly,
+    // create a string of `-all` to use in our class name.
+    $all: null;
+
+    @if ($direction == null) {
+      $all: -all;
+    }
+
     @each $size, $value in $sizes {
-      .u-#{$property}#{$direction}#{$size} {
+
+      .u-#{$property}#{$direction}#{$all}#{$size} {
         #{$property}#{$direction}: $value !important;
       }
+
     }
+
   }
+
 }
