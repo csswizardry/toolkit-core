@@ -1,0 +1,41 @@
+// =============================================================================
+// SETTINGS / AESTHETICS
+// =============================================================================
+
+// Global typography settings.
+// ==============================================
+
+$global-font-size: 22px !default;
+$global-line-height: 30px !default;
+$global-font-family: Sky Text, Helvetica, Arial, sans-serif !default;
+
+// Borders
+// ==============================================
+
+$global-border-color: color(keyline);
+$global-border-width: 1px !default;
+$global-border-radius: 0.25em !default;
+
+// Animations
+// ==============================================
+
+$global-animation-speed: 0.5s !default;
+
+//
+//
+//
+//
+//
+//
+//
+//
+// WARNING
+// Private/framework-only reassignment. Do not alter anything below.
+$global-spacing-unit: $global-line-height;
+$global-spacing-unit-tiny: round(0.25 * $global-spacing-unit);
+$global-spacing-unit-small: round(0.5 * $global-spacing-unit);
+$global-spacing-unit-large: round(2 * $global-spacing-unit);
+
+@if ($global-spacing-unit != $global-line-height) {
+  @error "The value of `$global-spacing-unit` must not be changed.";
+}

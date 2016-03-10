@@ -19,9 +19,9 @@
 
 html {
   @include background-gradient("small");
-  font-size: ($base-font-size / 16px) * 1em;
-  line-height: $base-line-height / $base-font-size;
-  font-family: $base-font-family;
+  font-size: ($global-font-size / 16px) * 1em;
+  line-height: $global-line-height / $global-font-size;
+  font-family: $global-font-family;
   color: color(text);
   overflow-y: scroll;
   min-height: 100%;

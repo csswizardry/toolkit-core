@@ -2,14 +2,6 @@
 // SETTINGS / TYPOGRAPHY
 // =============================================================================
 
-// Global typography settings.
-// ==============================================
-
-$base-font-size: 22px !default;
-$base-line-height: 30px !default;
-
-$base-font-family: Sky Text, Helvetica, Arial, sans-serif !default;
-
 // Heading-level typography
 // ==============================================
 
@@ -21,17 +13,6 @@ $text-delta: 28px !default;
 // Text-level typography
 // ==============================================
 
-$text-body: $base-font-size;
+$text-body: $global-font-size;
 $text-body-small: 18px !default;
 $text-caption: 14px !default;
-
-// WARNING
-// Private/framework-only reassignment. Do not alter anything below.
-$spacing-unit: $base-line-height;
-$spacing-unit-tiny: round(0.25 * $spacing-unit);
-$spacing-unit-small: round(0.5 * $spacing-unit);
-$spacing-unit-large: round(2   * $spacing-unit);
-
-@if ($spacing-unit != $base-line-height) {
-  @error "The value of `$spacing-unit` must not be changed.";
-}

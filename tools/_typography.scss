@@ -4,10 +4,10 @@
 
 @mixin font-size($font-size, $line-height: auto) {
   font-size: $font-size;
-  font-size: ($font-size / $base-font-size) * 1rem;
+  font-size: ($font-size / $global-font-size) * 1rem;
 
   @if $line-height == auto {
-    line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+    line-height: ceil($font-size / $global-line-height) * ($global-line-height / $font-size);
   }
 
   @else {
