@@ -6,16 +6,20 @@
  * Text ultility to contrain text to a maximum of 75 characters per line.
  */
 .u-text-constrain {
-  max-width: 30em;
+  max-width: 30em !important;
 }
 
 /* Text alignment utilities
    =========================================== */
 
 .u-text-left {
-  text-align: left;
+  text-align: left !important;
+}
+
+.u-text-center {
+  text-align: center !important;
 }
 
 .u-text-right {
-  text-align: right;
+  text-align: right !important;
 }
