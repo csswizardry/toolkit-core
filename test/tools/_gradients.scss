@@ -29,13 +29,12 @@
       }
 
       @include expect {
-        background: #000;
+        background-color: #000;
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000", endColorstr="#fff", GradientType=1);
-        background: -webkit-gradient(left top, right top, color-stop(0%, #000), color-stop(50%, #fff), color-stop(100%, #000));
-        background: -webkit-linear-gradient(left, #000 0%, #fff 50%, #000 100%);
-        background: -moz-linear-gradient(left, #000 0%, #fff 50%, #000 100%);
-        background: -o-linear-gradient(left, #000 0%, #fff 50%, #000 100%);
-        background: linear-gradient(to right, #000 0%, #fff 50%, #000 100%);
+        background-image: -webkit-linear-gradient(left, #000 0%, #fff 50%, #000 100%);
+        background-image: -moz-linear-gradient(left, #000 0%, #fff 50%, #000 100%);
+        background-image: -o-linear-gradient(left, #000 0%, #fff 50%, #000 100%);
+        background-image: linear-gradient(to right, #000 0%, #fff 50%, #000 100%);
       }
     }
   }
@@ -47,13 +46,12 @@
       }
 
       @include expect {
-        background: #000;
+        background-color: #000;
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000", endColorstr="#fff", GradientType=1);
-        background: -webkit-gradient(left top, right top, color-stop(0%, #000), color-stop(50%, #fff), color-stop(100%, #000));
-        background: -webkit-linear-gradient(left, #000 0%, #fff 50%, #000 100%);
-        background: -moz-linear-gradient(left, #000 0%, #fff 50%, #000 100%);
-        background: -o-linear-gradient(left, #000 0%, #fff 50%, #000 100%);
-        background: linear-gradient(to right, #000 0%, #fff 50%, #000 100%);
+        background-image: -webkit-linear-gradient(left, #000 0%, #fff 50%, #000 100%);
+        background-image: -moz-linear-gradient(left, #000 0%, #fff 50%, #000 100%);
+        background-image: -o-linear-gradient(left, #000 0%, #fff 50%, #000 100%);
+        background-image: linear-gradient(to right, #000 0%, #fff 50%, #000 100%);
       }
     }
   }
@@ -65,13 +63,12 @@
       }
 
       @include expect {
-        background: #000;
+        background-color: #000;
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000", endColorstr="#fff", GradientType=1);
-        background: -webkit-gradient(radial, center center, 0, center center, 100%, color-stop(0%, #fff), color-stop(100%, #000));
-        background: -webkit-radial-gradient(center, circle cover, #fff 0%, #000 100%);
-        background: -moz-radial-gradient(center, circle cover, #fff 0%, #000 100%);
-        background: -o-radial-gradient(center, circle cover, #fff 0%, #000 100%);
-        background: radial-gradient(center, circle cover, #fff 0%, #000 100%);
+        background-image: -webkit-radial-gradient(center, circle cover, #fff 0%, #000 100%);
+        background-image: -moz-radial-gradient(center, circle cover, #fff 0%, #000 100%);
+        background-image: -o-radial-gradient(center, circle cover, #fff 0%, #000 100%);
+        background-image: radial-gradient(circle farthest-corner at center, #fff 0%, #000 100%);
       }
     }
   }
