@@ -2,6 +2,20 @@
    UTILS / TYPOGRAPHY
    ========================================================================== */
 
+/**
+ * Text ultility to contrain text to a maximum of 75 characters per line.
+ */
 .u-text-constrain {
   max-width: 30em;
+}
+
+/* Text alignment utilities
+   =========================================== */
+
+.u-text-left {
+  text-align: left;
+}
+
+.u-text-right {
+  text-align: right;
 }
