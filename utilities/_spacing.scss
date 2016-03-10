@@ -1,0 +1,32 @@
+/* ==========================================================================
+   UTILITIES / SPACING
+   ========================================================================== */
+
+$directions: (
+  null,
+  -top,
+  -right,
+  -bottom,
+  -left,
+);
+
+$properties: (
+  padding,
+  margin
+);
+
+$sizes: (
+  null: $spacing-unit,
+  -small: $spacing-unit-small,
+  -large: $spacing-unit-large,
+);
+
+@each $direction in $directions {
+  @each $property in $properties {
+    @each $size, $value in $sizes {
+      .u-#{$property}#{$direction}#{$size} {
+        #{$property}#{$direction}: $value !important;
+      }
+    }
+  }
+}
