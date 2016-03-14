@@ -31,6 +31,11 @@ html {
   -webkit-font-smoothing: antialiased;
 
   @include mq($from: medium) {
-    @include background-gradient("large");
+    background-color: #c9c7d1;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c9c7d1", endColorstr="#fefefe", GradientType=1);
+    background-image: -webkit-linear-gradient(left, #c9c7d1 0%, #e5e5ea 6%, #fefefe 20%, #fefefe 80%, #e5e5ea 94%, #c9c7d1 100%);
+    background-image: -moz-linear-gradient(left, #c9c7d1 0%, #e5e5ea 6%, #fefefe 20%, #fefefe 80%, #e5e5ea 94%, #c9c7d1 100%);
+    background-image: -o-linear-gradient(left, #c9c7d1 0%, #e5e5ea 6%, #fefefe 20%, #fefefe 80%, #e5e5ea 94%, #c9c7d1 100%);
+    background-image: linear-gradient(to right, #c9c7d1 0%, #e5e5ea 6%, #fefefe 20%, #fefefe 80%, #e5e5ea 94%, #c9c7d1 100%);
   }
 }
