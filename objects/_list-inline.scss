@@ -20,12 +20,12 @@
 
 .o-list-inline--wide {
   > .o-list-inline__item {
-    margin-right: $spacing-unit;
+    margin-right: $global-spacing-unit;
   }
 }
 
 .o-list-inline--narrow {
   > .o-list-inline__item {
-    margin-right: $spacing-unit-small;
+    margin-right: $global-spacing-unit-small;
   }
 }

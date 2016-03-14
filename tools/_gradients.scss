@@ -8,25 +8,23 @@
     $endColor: gradient($key, end);
     $midColor: gradient($key, mid);
     // Set fallback background color to the end gradient value.
-    background: $endColor;
+    background-color: $endColor;
 
     // If orientation is defined as linear (or undefined), output linear gradient
     @if $orientation == "linear" {
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#{$endColor}", endColorstr="#{$midColor}", GradientType=1);
-      background: -webkit-gradient(left top, right top, color-stop(0%, $endColor), color-stop(50%, $midColor), color-stop(100%, $endColor));
-      background: -webkit-linear-gradient(left, $endColor 0%, $midColor 50%, $endColor 100%);
-      background: -moz-linear-gradient(left, $endColor 0%, $midColor 50%, $endColor 100%);
-      background: -o-linear-gradient(left, $endColor 0%, $midColor 50%, $endColor 100%);
-      background: linear-gradient(to right, $endColor 0%, $midColor 50%, $endColor 100%);
+      background-image: -webkit-linear-gradient(left, $endColor 0%, $midColor 50%, $endColor 100%);
+      background-image: -moz-linear-gradient(left, $endColor 0%, $midColor 50%, $endColor 100%);
+      background-image: -o-linear-gradient(left, $endColor 0%, $midColor 50%, $endColor 100%);
+      background-image: linear-gradient(to right, $endColor 0%, $midColor 50%, $endColor 100%);
     }
     // If orientation is defined as radial, output radial gradient
     @else if $orientation == "radial" {
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#{$endColor}", endColorstr="#{$midColor}", GradientType=1);
-      background: -webkit-gradient(radial, center center, 0, center center, 100%, color-stop(0%, $midColor), color-stop(100%, $endColor));
-      background: -webkit-radial-gradient(center, circle cover, $midColor 0%, $endColor 100%);
-      background: -moz-radial-gradient(center, circle cover, $midColor 0%, $endColor 100%);
-      background: -o-radial-gradient(center, circle cover, $midColor 0%, $endColor 100%);
-      background: radial-gradient(center, circle cover, $midColor 0%, $endColor 100%);
+      background-image: -webkit-radial-gradient(center, circle cover, $midColor 0%, $endColor 100%);
+      background-image: -moz-radial-gradient(center, circle cover, $midColor 0%, $endColor 100%);
+      background-image: -o-radial-gradient(center, circle cover, $midColor 0%, $endColor 100%);
+      background-image: radial-gradient(circle farthest-corner at center, $midColor 0%, $endColor 100%);
     }
   }
 

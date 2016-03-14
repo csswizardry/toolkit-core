@@ -4,6 +4,7 @@
 
 // Settings
 @import "settings/config";
+@import "settings/globals";
 @import "settings/colors";
 @import "settings/typography";
 @import "settings/breakpoints";
@@ -38,9 +39,10 @@
 @import "objects/list-block";
 @import "objects/list-inline";
 
-// Utils
-@import "utils/clearfix";
-@import "utils/hide";
-@import "utils/typography";
-@import "utils/widths";
-@import "utils/debug";
+// Utilities
+@import "utilities/clearfix";
+@import "utilities/hide";
+@import "utilities/typography";
+@import "utilities/spacing";
+@import "utilities/widths";
+@import "utilities/debug";
