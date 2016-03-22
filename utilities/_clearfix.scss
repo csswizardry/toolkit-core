@@ -2,12 +2,6 @@
    UTILITIES / CLEARFIX
    ========================================================================== */
 
-.u-clearfix,
-%u-clearfix {
-
-  &::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+.u-clearfix {
+  @include clearfix();
 }

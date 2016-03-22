@@ -5,7 +5,7 @@
 /** @define o-media */
 
 .o-media {
-  @extend %u-clearfix;
+  @include clearfix();
 }
 
 .o-media__body {
