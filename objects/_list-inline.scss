@@ -3,29 +3,29 @@
    ========================================================================== */
 
 /**
-* The list-inline object displays any list of items as a single line.
-*/
+ * The list-inline object displays any list of items as a single line.
+ */
 
-.o-list-inline {
+/* [ul|ol] */.o-list-inline {
   margin-left: 0;
   list-style: none;
 }
 
-.o-list-inline__item {
+/* li */.o-list-inline__item {
   display: inline-block;
 }
 
 /* Spacing modifiers
    =========================================== */
 
-.o-list-inline--wide {
-  > .o-list-inline__item {
+/* [ul|ol] */.o-list-inline--wide {
+  > /* li */.o-list-inline__item {
     margin-right: $global-spacing-unit;
   }
 }
 
-.o-list-inline--narrow {
-  > .o-list-inline__item {
+/* [ul|ol] */.o-list-inline--narrow {
+  > /* li */.o-list-inline__item {
     margin-right: $global-spacing-unit-small;
   }
 }
