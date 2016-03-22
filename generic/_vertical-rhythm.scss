@@ -13,10 +13,10 @@ blockquote, p, address,
 table,
 fieldset, figure,
 pre {
-  margin-bottom: $spacing-unit;
+  margin-bottom: $global-spacing-unit;
 }
 
 ul,  ol,
 dd {
-  margin-left: $spacing-unit;
+  margin-left: $global-spacing-unit;
 }

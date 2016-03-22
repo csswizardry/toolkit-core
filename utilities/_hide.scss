@@ -1,7 +1,11 @@
 /* ==========================================================================
-   UTILS / TYPOGRAPHY
+   UTILITIES / HIDE
    ========================================================================== */
 
-.u-text-constrain {
-  max-width: 30em;
+.u-hide-visually {
+  @include hide-visually();
+}
+
+.u-hide-completely {
+  @include hide-completely();
 }

@@ -17,6 +17,6 @@
 .o-media__img {
   @include mq($from: medium) {
     float: left;
-    margin-right: $spacing-unit;
+    margin-right: $global-spacing-unit;
   }
 }

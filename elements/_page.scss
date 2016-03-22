@@ -18,9 +18,9 @@
  */
 atml {
   @include background-gradient("small");
-  font-size: ($base-font-size / 16px) * 1em; /* [1] */
-  line-height: $base-line-height / $base-font-size; /* [1] */
-  font-family: $base-font-family;
+  font-size: ($global-font-size / 16px) * 1em;
+  line-height: $global-line-height / $global-font-size;
+  font-family: $global-font-family;
   color: color(text);
   overflow-y: scroll; /* [2] */
   min-height: 100%; /* [3] */
@@ -33,6 +33,11 @@ atml {
    * The brand defines a larger style of gradient on bigger screens.
    */
   @include mq($from: medium) {
-    @include background-gradient("large");
+    background-color: #c9c7d1;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c9c7d1", endColorstr="#fefefe", GradientType=1);
+    background-image: -webkit-linear-gradient(left, #c9c7d1 0%, #e5e5ea 6%, #fefefe 20%, #fefefe 80%, #e5e5ea 94%, #c9c7d1 100%);
+    background-image: -moz-linear-gradient(left, #c9c7d1 0%, #e5e5ea 6%, #fefefe 20%, #fefefe 80%, #e5e5ea 94%, #c9c7d1 100%);
+    background-image: -o-linear-gradient(left, #c9c7d1 0%, #e5e5ea 6%, #fefefe 20%, #fefefe 80%, #e5e5ea 94%, #c9c7d1 100%);
+    background-image: linear-gradient(to right, #c9c7d1 0%, #e5e5ea 6%, #fefefe 20%, #fefefe 80%, #e5e5ea 94%, #c9c7d1 100%);
   }
 }

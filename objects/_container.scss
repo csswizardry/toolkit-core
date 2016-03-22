@@ -5,9 +5,9 @@
 /** @define o-container */
 
 .o-container {
-  max-width: 1140px;
-  padding-right: $spacing-unit;
-  padding-left: $spacing-unit;
+  max-width: 1200px; // 1140px with padding
+  padding-right: $global-spacing-unit;
+  padding-left: $global-spacing-unit;
   margin-right: auto;
   margin-left: auto;
 }
