@@ -16,6 +16,9 @@ pre {
   margin-bottom: $global-spacing-unit;
 }
 
+/**
+ * We’ll also indent list elements by the same amount of spacing.
+ */
 ul,  ol,
 dd {
   margin-left: $global-spacing-unit;
