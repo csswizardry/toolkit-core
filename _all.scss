@@ -1,15 +1,17 @@
-// =============================================================================
-// CORE IMPORTS
-// =============================================================================
+/* ==========================================================================
+   CORE IMPORTS
+   ========================================================================== */
 
 /**
  * CONTENTS
  *
  * SETTINGS
  * Config...............Configuration and environment settings.
+ * Globals..............Globally available settings for the entire project.
  * Colors...............Brand colours are centrally managed for later use.
- * Typography...........Define our *global* typographical settings in one place.
- * Breakpoints..........Hold sitewide breakpoint values in an array.
+ * Typography...........Define our typographical settings in one place.
+ * Breakpoints..........Hold sitewide breakpoint values in an array for use with
+ *                      Sass MQ.
  *
  * TOOLS
  * Sass MQ..............Neat little library for managing and using Media Queries
@@ -50,7 +52,7 @@
  *                      blocks or stacked content.
  * List-inline..........Force a list of items to all sit side-by-side.
  *
- * UTILS
+ * UTILITIES
  * Clearfix.............Utility class for applying a clearfix to an element.
  * Hide.................Helper classes for hiding content in different ways.
  * Typography...........A suite of helper classes for manipulating typographical
