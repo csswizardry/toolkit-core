@@ -2,6 +2,9 @@
    ELEMENTS / TYPOGRAPHY
    ========================================================================== */
 
+/* Headings
+   =========================================== */
+
 /**
  * Force all headings to have the exact same *default* styling. This means we
  * are free to use the correct semantic element without having opinionated look-
@@ -14,6 +17,9 @@ h1, h2, h3, h4, h5, h6 {
   @include font-size(22px);
   font-weight: normal;
 }
+
+/* Other text-level elements
+   =========================================== */
 
 /**
  * As above, leave SMALL as a purely semantic choice, and omit any cosmetics.

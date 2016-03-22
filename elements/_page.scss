@@ -16,7 +16,7 @@
  * 5. Fonts on OSX will look more consistent with other systems that do not
  *    render text using sub-pixel anti-aliasing.
  */
-atml {
+html {
   @include background-gradient("small");
   font-size: ($global-font-size / 16px) * 1em;
   line-height: $global-line-height / $global-font-size;
