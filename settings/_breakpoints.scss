@@ -2,7 +2,33 @@
 // SETTINGS / BREAKPOINTS
 // =============================================================================
 
-// Breakpoint variables for use with sass-mq
+// Define our breakpoints for later use with Sass MQ. The key (e.g. `small`)
+// becomes the alias for a breakpoint; the value (e.g. `320px`) is that point at
+// which that breakpoint kicks in. These pixel values will be conveted into ems
+// by Sass MQ.
+//
+// Make use of these breakpoints like so:
+//
+//   .foo {
+//     color: red;
+//
+//     @include mq($from: small) {
+//       color: green;
+//     }
+//
+//   }
+//
+// This will compile to:
+//
+//   .foo {
+//     color: red;
+//   }
+//
+//   @media (min-width: 20em) {
+//     .foo {
+//       color: green;
+//     }
+//   }
 
 $mq-breakpoints: (
   small:   320px,

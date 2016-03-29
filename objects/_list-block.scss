@@ -3,14 +3,14 @@
    ========================================================================== */
 
 /**
-* The list-block object displays any list of items into stacked blocks.
-*/
+ * The list-block object displays any list of items into stacked blocks.
+ */
 
-.o-list-block {
+/* [ul|ol] */.o-list-block {
   margin-left: 0;
   list-style: none;
 }
 
-.o-list-block__item {
+/* li */.o-list-block__item {
   display: block;
 }

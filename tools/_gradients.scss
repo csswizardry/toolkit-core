@@ -2,6 +2,18 @@
 // TOOLS / GRADIENTS
 // =============================================================================
 
+// Gradient generator
+// ===========================================
+
+// Mixin to generate complete background gradients. Uses values from our map in
+// `settings/_colors.scss`.
+//
+// Example usage:
+//
+//   html {
+//     @include background-gradient("small");
+//   }
+//
 @mixin background-gradient($key, $orientation:"linear") {
   @if map-has-key($gradients, $key) {
     // Set values from $gradients variable map to local variables

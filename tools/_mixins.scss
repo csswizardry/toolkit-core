@@ -2,6 +2,9 @@
 // TOOLS / MIXINS
 // =============================================================================
 
+// Making accessible hover/focus states simpler
+// ===========================================
+
 // Generate `:hover` and `:focus` styles in one go.
 // http://www.456bereastreet.com/archive/201004/whenever_you_use_hover_also_use_focus/
 @mixin hocus() {
@@ -11,7 +14,11 @@
   }
 }
 
-// Visually hide content
+// Removing elements from view and/or ATs
+// ===========================================
+
+// Visually hide content, leaving it accessible to screenreaders and ATs.
+// http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
 @mixin hide-visually() {
   border: 0 !important;
   clip: rect(0 0 0 0) !important;
@@ -23,6 +30,20 @@
   width: 1px !important;
 }
 
+// Completely hide content both visually from the screen, and from screenreaders
+// and ATs.
 @mixin hide-completely() {
   display: none !important;
+}
+
+// Clearfix mixin for use later in the project
+// ===========================================
+@mixin clearfix() {
+
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
 }

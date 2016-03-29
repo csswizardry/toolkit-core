@@ -3,10 +3,10 @@
    ========================================================================== */
 
 /**
-* The list-bare object removes indents and bullet points from any list.
-*/
+ * The list-bare object removes indents and bullet points from any list.
+ */
 
-.o-list-bare {
+/* [ul|ol] */.o-list-bare {
   margin-left: 0;
   list-style: none;
 }

@@ -1,16 +1,34 @@
-/* ==========================================================================
-   UTILITIES / DEBUG
-   ========================================================================== */
+@if (config(debug) == true) {
+  /* ==========================================================================
+     UTILITIES / DEBUG
+     ========================================================================== */
 
-/**
- * Warn people when they try to manipulate layout items in grids that are
- * already reversed.
- */
-.o-layout--reverse {
+  /* Layout debugging
+     =========================================== */
 
-  > [class*=u-push],
-  > [class*=u-pull] {
+  /**
+   * Warn people when they try to manipulate layout items in grids that are
+   * already reversed.
+   */
+  .o-layout--reverse {
+
+    > [class*="u-push"],
+    > [class*="u-pull"] {
+      outline: 10px solid red;
+    }
+
+  }
+
+  /**
+   * Warn people when they try to use layout items outside of a layout context.
+   */
+  .o-layout__item {
     outline: 10px solid red;
+
+    .o-layout > & {
+      outline: none;
+    }
+
   }
 
 }

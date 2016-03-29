@@ -2,12 +2,10 @@
    UTILITIES / CLEARFIX
    ========================================================================== */
 
-.u-clearfix,
-%u-clearfix {
-
-  &::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+/**
+ * Class-based implementation of our clearfix mixin. Use in markup only when
+ * there is no other hook available to apply the mixin to.
+ */
+.u-clearfix {
+  @include clearfix();
 }

@@ -1,6 +1,72 @@
-// =============================================================================
-// CORE IMPORTS
-// =============================================================================
+/* ==========================================================================
+   CORE IMPORTS
+   ========================================================================== */
+
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ * Config...............Configuration and environment settings.
+ * Globals..............Globally available settings for the entire project.
+ * Colors...............Brand colours are centrally managed for later use.
+ * Typography...........Define our typographical settings in one place.
+ * Breakpoints..........Hold sitewide breakpoint values in an array for use with
+ *                      Sass MQ.
+ *
+ * TOOLS
+ * Sass MQ..............Neat little library for managing and using Media Queries
+ *                      throughout the rest of the project.
+ * Functions............A collection of custom Sass functions.
+ * Mixins...............A collection of custom Sass mixins.
+ * Typography...........Mixins specifically for helping with setting type.
+ * Gradients............Mixins specifically for helping with creating gradients.
+ *
+ * GENERIC
+ * Box-sizing...........Better default box-model.
+ * Normalize.css........Normalise differences across different browsers.
+ * Reset................Simple reset to complement Normalize.css: set everything
+ *                      to zero.
+ * Vertical Rhythm......Define common vertical spacing across all block-level
+ *                      elements in one go.
+ * Font-face............Our @font-face definitions for custom fonts.
+ *
+ * ELEMENTS
+ * Page.................Set up our HTML and/or BODY elements.
+ * Typography...........Simple typographical elements (e.g. H1–H6).
+ * Forms................Very, very basic (reset-like) form element styles.
+ * Links................Default styles for simple hyperlinks.
+ * Tables...............Baseline styling to TABLE elements.
+ * Images...............Sensible defaults for IMG elements.
+ *
+ * OBJECTS
+ * Container............Page-level wrappers and containers.
+ * Layout...............Grid-like layout mechanism for arranging components.
+ *                      Complemented by our width utility classes in order to
+ *                      create fluid and responsive page layouts.
+ * Media Object.........Abstraction for placing image- and text-like content
+ *                      side by side.
+ * Tables...............Slightly more opinionated and structural styles for
+ *                      TABLE elements.
+ * List-bare............Strip obvious list styling (bullet points, indents) from
+ *                      list elements.
+ * List-block...........Remove list-like styling and force list items to be
+ *                      blocks or stacked content.
+ * List-inline..........Force a list of items to all sit side-by-side.
+ *
+ * UTILITIES
+ * Clearfix.............Utility class for applying a clearfix to an element.
+ * Hide.................Helper classes for hiding content in different ways.
+ * Typography...........A suite of helper classes for manipulating typographical
+ *                      elements (alignment, size, etc.).
+ * Widths...............A rather complex file which will generate a series of
+ *                      utilities for (responsively) setting the width of an
+ *                      element. Creates classes like `.u-1/2` (make something
+ *                      50% width) or `.u-2/3@large` (make something 66.666%
+ *                      width but only on large screens). Most commonly used in
+ *                      conjunction with our layout system.
+ * Debug................Enabling debugging mode will point out various errors
+ *                      and mistakes in our HTML.
+ */
 
 // Settings
 @import "settings/config";
@@ -13,7 +79,6 @@
 @import "sass-mq/mq";
 @import "tools/functions";
 @import "tools/mixins";
-@import "tools/font-face";
 @import "tools/typography";
 @import "tools/gradients";
 
@@ -22,8 +87,9 @@
 @import "generic/normalize";
 @import "generic/reset";
 @import "generic/vertical-rhythm";
+@import "generic/font-face";
 
-// Base
+// Elements
 @import "elements/page";
 @import "elements/typography";
 @import "elements/forms";
