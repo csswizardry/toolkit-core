@@ -1,4 +1,4 @@
-# Toolkit UI
+# Toolkit Core
 
 The core of Sky's web Toolkit. For full documentation and usage notes, please see the main [Toolkit project](https://github.com/sky-uk/toolkit/).
 
