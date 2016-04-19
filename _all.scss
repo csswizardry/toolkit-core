@@ -29,6 +29,7 @@
  * Vertical Rhythm......Define common vertical spacing across all block-level
  *                      elements in one go.
  * Font-face............Our @font-face definitions for custom fonts.
+ * Generic..............Our @keyframe definitions for animations.
  *
  * ELEMENTS
  * Page.................Set up our HTML and/or BODY elements.
@@ -88,6 +89,7 @@
 @import "generic/reset";
 @import "generic/vertical-rhythm";
 @import "generic/font-face";
+@import "generic/keyframes";
 
 // Elements
 @import "elements/page";
