@@ -19,7 +19,7 @@
 // Font size mixin
 // ===========================================
 
-@include test-module("@background-gradient mixin") {
+@include test-module("@mixin background-gradient") {
   @include gradients_before();
 
   @include test("should return a linear gradient for the given key") {

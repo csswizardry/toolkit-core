@@ -23,7 +23,7 @@
 // $gradients map reader
 // ===========================================
 
-@include test-module("Gradient map reader") {
+@include test-module("@function gradient") {
   @include functions_before();
 
   @include test("should return an end hex value for given key") {
@@ -51,7 +51,7 @@
 // $colors map reader
 // ===========================================
 
-@include test-module("Color map reader") {
+@include test-module("@function color") {
   @include functions_before();
 
   @include test("should return a hex value for given key") {
