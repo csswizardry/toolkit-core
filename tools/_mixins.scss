@@ -17,7 +17,14 @@
 //   }
 @mixin add-color($key, $value) {
   $new-color: ($key: $value);
-  $colors: map-merge($colors, $new-color) !global;
+
+  @if type-of($value) == color {
+    $colors: map-merge($colors, $new-color) !global;
+  }
+
+  @else {
+    @warn "#{$value} is not a valid color.";
+  }
 }
 
 // Making accessible hover/focus states simpler
