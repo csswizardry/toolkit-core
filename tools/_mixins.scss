@@ -2,6 +2,31 @@
 // TOOLS / MIXINS
 // =============================================================================
 
+// Add color to color map (settings/_colors)
+// ===========================================
+
+// $name - Name of the color
+// $value - Hex value of the color
+
+// For example:
+//
+//   @include add-color(sky1, #0076be);
+//
+//   .foo {
+//     color: color(sky1);
+//   }
+@mixin add-color($key, $value) {
+  $new-color: ($key: $value);
+
+  @if type-of($value) == color {
+    $colors: map-merge($colors, $new-color) !global;
+  }
+
+  @else {
+    @warn "#{$value} is not a valid color.";
+  }
+}
+
 // Making accessible hover/focus states simpler
 // ===========================================
 

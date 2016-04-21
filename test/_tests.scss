@@ -2,8 +2,9 @@
 
 // Import Test files
 @import "tools/functions";
-@import "tools/typography";
 @import "tools/gradients";
+@import "tools/mixins";
+@import "tools/typography";
 
 // Run the tests
 @include report();

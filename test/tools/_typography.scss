@@ -15,7 +15,7 @@
 // Font size mixin
 // ===========================================
 
-@include test-module("@font-size mixin") {
+@include test-module("@mixin font-size") {
   @include typography_before();
 
   @include test("should return font size in pixels and rems") {

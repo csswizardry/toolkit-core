@@ -1,0 +1,43 @@
+// =============================================================================
+// TEST / TOOLS / MIXINS
+// =============================================================================
+
+@import "../../tools/mixins";
+
+// Test config
+// ===========================================
+
+@mixin add-color_before() {
+  $test-key: test-color !global;
+  $test-value: #bada55 !global;
+
+  $colors: (
+    white: #fff,
+    black: #000,
+  ) !global;
+}
+
+
+// Add color to color map (settings/_colors)
+// ===========================================
+
+@include test-module("@mixin add-color") {
+  @include add-color_before();
+
+  @include test("should add new key and value to color map") {
+    @include assert("merges color map with new values") {
+      @include input {
+        @include add-color($test-key, $test-value);
+        color: map-get($colors, white);
+        background: map-get($colors, black);
+        border-color: map-get($colors, $test-key);
+      }
+
+      @include expect {
+        color: #fff;
+        background: #000;
+        border-color: $test-value;
+      }
+    }
+  }
+}
