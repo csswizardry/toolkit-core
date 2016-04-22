@@ -62,10 +62,10 @@
 
       @include expect {
         background-color: #fff;
-        background-image: -webkit-linear-gradient(left, #000 0%, #fff 100%);
-        background-image: -moz-linear-gradient(left, #000 0%, #fff 100%);
-        background-image: -o-linear-gradient(left, #000 0%, #fff 100%);
-        background-image: linear-gradient(to right, #000 0%, #fff 100%);
+        background-image: -webkit-linear-gradient(left, #000 0%, #fff 50%, #000 100%);
+        background-image: -moz-linear-gradient(left, #000 0%, #fff 50%, #000 100%);
+        background-image: -o-linear-gradient(left, #000 0%, #fff 50%, #000 100%);
+        background-image: linear-gradient(to right, #000 0%, #fff 50%, #000 100%);
       }
     }
   }

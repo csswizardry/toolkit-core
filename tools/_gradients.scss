@@ -39,11 +39,20 @@
       $direction-legacy: map-get(map-get($direction-map, $direction), legacy);
       $direction-standard: map-get(map-get($direction-map, $direction), standard);
 
+      $gradient-color-points: $startColor 0%, $endColor 100% !default;
+
+      // Force horizontal to conform to brand 3 point gradient and vertical to a 2 point gradient.
+      @if ($direction == "horizontal") {
+        $gradient-color-points: $startColor 0%, $endColor 50%, $startColor 100%;
+      } @else {
+        $gradient-color-points: $startColor 0%, $endColor 100%;
+      }
+
       background-color: $endColor; // Fallback for browsers lacking linear gradient
-      background-image: -webkit-linear-gradient($direction-legacy, $startColor 0%, $endColor 100%);
-      background-image: -moz-linear-gradient($direction-legacy, $startColor 0%, $endColor 100%);
-      background-image: -o-linear-gradient($direction-legacy, $startColor 0%, $endColor 100%);
-      background-image: linear-gradient($direction-standard, $startColor 0%, $endColor 100%);
+      background-image: -webkit-linear-gradient($direction-legacy, $gradient-color-points);
+      background-image: -moz-linear-gradient($direction-legacy, $gradient-color-points);
+      background-image: -o-linear-gradient($direction-legacy, $gradient-color-points);
+      background-image: linear-gradient($direction-standard, $gradient-color-points);
     }
 
     @else {
