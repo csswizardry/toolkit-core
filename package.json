@@ -1,6 +1,6 @@
 {
   "name": "sky-toolkit-core",
-  "version": "0.1.9",
+  "version": "0.2.0",
   "description": "The core framework of Sky's web toolkit",
   "main": "index.js",
   "scripts": {

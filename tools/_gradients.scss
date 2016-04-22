@@ -2,7 +2,7 @@
 // TOOLS / GRADIENTS
 // =============================================================================
 
-// Gradient generator
+// Background Gradient generator
 // ===========================================
 
 // Mixin to generate complete background gradients. Uses values from our map in
@@ -11,32 +11,56 @@
 // Example usage:
 //
 //   html {
-//     @include background-gradient("small");
+//     @include background-gradient(sky-sports, horizontal);
 //   }
-//
-@mixin background-gradient($key, $orientation:"linear") {
-  @if map-has-key($gradients, $key) {
-    // Set values from $gradients variable map to local variables
-    $endColor: gradient($key, end);
-    $midColor: gradient($key, mid);
-    // Set fallback background color to the end gradient value.
-    background-color: $endColor;
 
-    // If orientation is defined as linear (or undefined), output linear gradient
-    @if $orientation == "linear" {
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#{$endColor}", endColorstr="#{$midColor}", GradientType=1);
-      background-image: -webkit-linear-gradient(left, $endColor 0%, $midColor 50%, $endColor 100%);
-      background-image: -moz-linear-gradient(left, $endColor 0%, $midColor 50%, $endColor 100%);
-      background-image: -o-linear-gradient(left, $endColor 0%, $midColor 50%, $endColor 100%);
-      background-image: linear-gradient(to right, $endColor 0%, $midColor 50%, $endColor 100%);
+@mixin background-gradient($key, $direction:"vertical") {
+  @if map-has-key($gradients, $key) {
+
+    // Set values from $gradients variable map to local variables
+    $startColor: gradient($key, start);
+    $endColor: gradient($key, end);
+
+    // The direction map stores values for the direction for both prefixed and
+    // standard linear-gradient
+    $direction-map: (
+      vertical: (
+        legacy: top,
+        standard: to bottom
+      ),
+      horizontal: (
+        legacy: left,
+        standard: to right
+      )
+    );
+
+    // Check if direction exists in direction map:
+    @if map-has-key($direction-map, $direction) {
+      // Fetch both the legacy and standards version for given direction
+      $direction-legacy: map-get(map-get($direction-map, $direction), legacy);
+      $direction-standard: map-get(map-get($direction-map, $direction), standard);
+
+      $gradient-color-points: $startColor 0%, $endColor 100% !default;
+
+      // Force horizontal to conform to brand 3 point gradient and vertical to
+      // a 2 point gradient.
+      @if ($direction == "horizontal") {
+        $gradient-color-points: $startColor 0%, $endColor 50%, $startColor 100%;
+      }
+
+      @else {
+        $gradient-color-points: $startColor 0%, $endColor 100%;
+      }
+
+      background-color: $endColor; // Fallback for browsers lacking linear gradient
+      background-image: -webkit-linear-gradient($direction-legacy, $gradient-color-points);
+      background-image: -moz-linear-gradient($direction-legacy, $gradient-color-points);
+      background-image: -o-linear-gradient($direction-legacy, $gradient-color-points);
+      background-image: linear-gradient($direction-standard, $gradient-color-points);
     }
-    // If orientation is defined as radial, output radial gradient
-    @else if $orientation == "radial" {
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#{$endColor}", endColorstr="#{$midColor}", GradientType=1);
-      background-image: -webkit-radial-gradient(center, circle cover, $midColor 0%, $endColor 100%);
-      background-image: -moz-radial-gradient(center, circle cover, $midColor 0%, $endColor 100%);
-      background-image: -o-radial-gradient(center, circle cover, $midColor 0%, $endColor 100%);
-      background-image: radial-gradient(circle farthest-corner at center, $midColor 0%, $endColor 100%);
+
+    @else {
+      @warn "#{$direction}` is not a valid direction, it must be vertical or horizontal.";
     }
   }
 
