@@ -21,7 +21,8 @@
     $startColor: gradient($key, start);
     $endColor: gradient($key, end);
 
-    // The direction map stores values for the direction for both prefixed and standard linear-gradient
+    // The direction map stores values for the direction for both prefixed and
+    // standard linear-gradient
     $direction-map: (
       vertical: (
         legacy: top,
@@ -41,10 +42,13 @@
 
       $gradient-color-points: $startColor 0%, $endColor 100% !default;
 
-      // Force horizontal to conform to brand 3 point gradient and vertical to a 2 point gradient.
+      // Force horizontal to conform to brand 3 point gradient and vertical to
+      // a 2 point gradient.
       @if ($direction == "horizontal") {
         $gradient-color-points: $startColor 0%, $endColor 50%, $startColor 100%;
-      } @else {
+      }
+
+      @else {
         $gradient-color-points: $startColor 0%, $endColor 100%;
       }
 

@@ -16,7 +16,7 @@
   ) !global;
 }
 
-// Font size mixin
+// Background gradient mixin
 // ===========================================
 
 @include test-module("@mixin background-gradient") {
@@ -41,7 +41,7 @@
   @include test("should return a vertical linear gradient for the given key when a vertical direction is set") {
     @include assert("compiles vertical linear gradient") {
       @include input {
-        @include background-gradient(testKey, 'vertical');
+        @include background-gradient(testKey, "vertical");
       }
 
       @include expect {
@@ -54,10 +54,10 @@
     }
   }
 
-  @include test("should return a vertical linear gradient for the given key when a horizontal direction is set") {
-    @include assert("compiles vertical linear gradient") {
+  @include test("should return a horizontal linear gradient for the given key when a horizontal direction is set") {
+    @include assert("compiles horizontal linear gradient") {
       @include input {
-        @include background-gradient(testKey, 'horizontal');
+        @include background-gradient(testKey, "horizontal");
       }
 
       @include expect {
