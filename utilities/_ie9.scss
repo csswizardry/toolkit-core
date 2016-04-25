@@ -3,12 +3,10 @@
    ========================================================================== */
 
 .ie9 {
-
   /**
    * Remove custom icon on form select inputs
    */
   .c-form-select::after {
     content: normal;
   }
-
 }
