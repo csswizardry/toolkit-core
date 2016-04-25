@@ -2,7 +2,21 @@
    UTILITIES / IE9
    ========================================================================== */
 
+/**
+ * This file is a crude, hacky dumping ground for any IE9-specific bug/fixes.
+ */
+
 .ie9 {
+  /**
+   * Nasty hard-coded height to fix IE bug with sizes of form inputs:
+   * http://joshnh.com/weblog/line-height-doesnt-work-as-expected-on-inputs/
+   */
+  .c-form-date,
+  .c-form-input,
+  .c-form-select {
+    height: 2.3em;
+  }
+
   /**
    * Remove custom icon on form select inputs
    */
