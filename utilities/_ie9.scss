@@ -9,4 +9,19 @@
   .c-form-select::after {
     content: normal;
   }
+
+  /**
+   * IE9 doesn’t support CSS animations, so let’s just undo everything visual
+   * and drop back to some simple ‘Loading…’ text.
+   */
+  .c-spinner {
+    font-size: inherit;
+    width: auto;
+    height: auto;
+    animation: none;
+    border: none;
+    border-radius: 0;
+    overflow: visible;
+    text-indent: 0;
+  }
 }
