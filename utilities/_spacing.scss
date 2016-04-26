@@ -51,6 +51,10 @@ $global-spacing-sizes: (
 
     }
 
+    .u-#{$property}#{$direction}#{$all}-none {
+      #{$property}#{$direction}: 0 !important;
+    }
+
   }
 
 }
