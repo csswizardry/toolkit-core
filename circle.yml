@@ -13,4 +13,4 @@ test:
 
 notify:
   webhooks:
-    - url: http://orion.cf.sky.com/orion/builds/circleci
+    - url: https://secure.sky.com/blackjack/builds/circleci
