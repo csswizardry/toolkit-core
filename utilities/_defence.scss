@@ -1,0 +1,64 @@
+/* ==========================================================================
+   UTILITIES / DEFENCE
+   ========================================================================== */
+
+/**
+ * Sets classic-masthead sass-mq breakpoint.
+ */
+@include mq-add-breakpoint(classic-masthead, 768px);
+
+/**
+ * Repair alterations to the current masthead caused by the Toolkit.
+ */
+#skycom-masthead-wrapper {
+  background: #fff !important;
+  font-size: 16px !important;
+  box-sizing: content-box !important;
+
+  /**
+   * Fixed media-query value set by the current masthead.
+   */
+  @include mq(classic-masthead) {
+    padding-bottom: 10px !important;
+  }
+}
+
+/**
+ * Repair alterations to the current footer caused by the Toolkit.
+ */
+.skycom-footer {
+  font-size: 16px !important;
+  box-sizing: content-box !important;
+}
+
+.skycom-footer__nav {
+  ul {
+    margin: 0 !important;
+  }
+}
+
+/**
+ * Repair alterations to the current message banners caused by the Toolkit.
+ */
+.skycom-message-container {
+  font-size: 14px !important;
+  box-sizing: content-box !important;
+}
+
+/**
+ * Repair links affected by 768px media query.
+ */
+@include mq($from: classic-masthead) {
+  a {
+    color: color(brand) !important;
+    text-decoration: none !important;
+  }
+}
+
+.skycom_container {
+  max-width: 1140px !important;
+
+  @include mq($from: classic-masthead) {
+    max-width: 1140px !important;
+  }
+}
