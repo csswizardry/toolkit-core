@@ -2,6 +2,10 @@
 // SETTINGS / CONFIG
 // =============================================================================
 
+// Sass Deprecate Mode
+// Coresponds to `$app-version` set in settings/version of the project.
+$deprecate-mode: "verbose";
+
 // Config-level settings (environment switches, debugging modes, etc.).
 
 $config: (

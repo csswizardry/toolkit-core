@@ -6,6 +6,7 @@
  * CONTENTS
  *
  * SETTINGS
+ * Version..............sky-toolkit-core version.
  * Config...............Configuration and environment settings.
  * Globals..............Globally available settings for the entire project.
  * Colors...............Brand colours are centrally managed for later use.
@@ -14,6 +15,8 @@
  *                      Sass MQ.
  *
  * TOOLS
+ * Sass Deprecate.......Warns about pieces of the codebase that are deprecated,
+ *                      instructing developers where to clean up.
  * Sass MQ..............Neat little library for managing and using Media Queries
  *                      throughout the rest of the project.
  * Functions............A collection of custom Sass functions.
@@ -71,6 +74,7 @@
  */
 
 // Settings
+@import "settings/version";
 @import "settings/config";
 @import "settings/globals";
 @import "settings/colors";
@@ -78,6 +82,7 @@
 @import "settings/breakpoints";
 
 // Tools
+@import "sass-deprecate/index";
 @import "sass-mq/mq";
 @import "tools/functions";
 @import "tools/mixins";
