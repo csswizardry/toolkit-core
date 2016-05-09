@@ -82,8 +82,8 @@
 @import "settings/breakpoints";
 
 // Tools
-@import "sass-deprecate/index";
-@import "sass-mq/mq";
+@import "../sass-deprecate/index";
+@import "../sass-mq/mq";
 @import "tools/functions";
 @import "tools/mixins";
 @import "tools/typography";
