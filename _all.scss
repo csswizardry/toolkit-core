@@ -23,6 +23,8 @@
  * Mixins...............A collection of custom Sass mixins.
  * Typography...........Mixins specifically for helping with setting type.
  * Gradients............Mixins specifically for helping with creating gradients.
+ * Page.................Mixin specifically for helping with creating the
+ *                      default page background.
  *
  * GENERIC
  * Box-sizing...........Better default box-model.
@@ -88,6 +90,7 @@
 @import "tools/mixins";
 @import "tools/typography";
 @import "tools/gradients";
+@import "tools/page";
 
 // Generic
 @import "generic/box-sizing";
