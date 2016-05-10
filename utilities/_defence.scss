@@ -50,8 +50,8 @@
  */
 @include mq($from: classic-masthead) {
   a {
-    color: color(brand) !important;
-    text-decoration: none !important;
+    color: color(brand);
+    text-decoration: none;
   }
 }
 
