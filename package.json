@@ -1,13 +1,14 @@
 {
   "name": "sky-toolkit-core",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "description": "The core framework of Sky's web toolkit",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha ./test/sass.js",
     "lint": "stylelint ./**/*.scss --syntax scss",
     "build": "cat _all.scss | node-sass --include-path node_modules/ --output-style compressed --precision 9 > dist/core.css",
-    "build-circle": "mkdir dist && npm run build"
+    "build-circle": "mkdir dist && npm run build",
+    "version": "bash scripts/update-version.sh"
   },
   "pre-commit": [
     "lint",
