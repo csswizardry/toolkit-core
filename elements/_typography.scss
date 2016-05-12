@@ -14,7 +14,7 @@
  * http://csswizardry.com/2016/02/managing-typography-on-large-apps/
  */
 h1, h2, h3, h4, h5, h6 {
-  @include font-size(22px);
+  @include font-size($global-font-size);
   font-weight: normal;
 }
 
