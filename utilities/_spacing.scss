@@ -27,6 +27,7 @@ $global-spacing-properties: (
 
 $global-spacing-sizes: (
   null: $global-spacing-unit,
+  -tiny: $global-spacing-unit-tiny,
   -small: $global-spacing-unit-small,
   -large: $global-spacing-unit-large,
 ) !default;
