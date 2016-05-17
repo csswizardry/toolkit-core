@@ -58,7 +58,7 @@
     "no-invalid-double-slash-comments": true,
     "no-missing-eof-newline": true,
     "number-leading-zero": "always",
-    "number-no-trailing-zeros": true,
+    "number-no-trailing-zeros": false,
     "number-zero-length-no-unit": true,
     "rule-non-nested-empty-line-before": [ "always-multi-line", {
       ignore: ["after-comment"],
