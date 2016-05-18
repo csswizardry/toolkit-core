@@ -21,7 +21,6 @@
 //    - "horizontal" Horizontal 3 point gradient
 //    - "radial" Radial 2 point gradient
 
-/* stylelint-disable value-list-comma-newline-after */
 @mixin background-gradient($key, $direction:"vertical") {
   @if map-has-key($gradients, $key) {
 
@@ -32,6 +31,7 @@
     // The direction map stores values for the direction for both prefixed and
     // standard linear-gradient
 
+    /* stylelint-disable value-list-comma-newline-after */
     $direction-map: (
       vertical: (
         legacy: top,
@@ -49,6 +49,7 @@
         type: radial
       )
     );
+    /* stylelint-enable */
 
     // Check if direction exists in direction map:
     @if map-has-key($direction-map, $direction) {
@@ -87,4 +88,3 @@
     @warn "Unknown `#{$key}` in $gradients.";
   }
 }
-/* stylelint-enable */
