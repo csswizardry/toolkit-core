@@ -32,6 +32,8 @@
     // standard linear-gradient
 
     /* stylelint-disable value-list-comma-newline-after */
+
+    /* Lint causes issues with radial legacy value and lint exceptions dont work in maps */
     $direction-map: (
       vertical: (
         legacy: top,
