@@ -69,4 +69,20 @@
       }
     }
   }
+
+  @include test("should return a radial gradient for the given key when a radial direction is set") {
+    @include assert("compiles radial linear gradient") {
+      @include input {
+        @include background-gradient(testKey, "radial");
+      }
+
+      @include expect {
+        background-color: #fff;
+        background-image: -webkit-radial-gradient(center, ellipse cover, #fff 0%, #000 100%);
+        background-image: -moz-radial-gradient(center, ellipse cover, #fff 0%, #000 100%);
+        background-image: -o-radial-gradient(center, ellipse cover, #fff 0%, #000 100%);
+        background-image: radial-gradient(ellipse at center, #fff 0%, #000 100%);
+      }
+    }
+  }
 }
