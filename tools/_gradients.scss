@@ -31,27 +31,23 @@
     // The direction map stores values for the direction for both prefixed and
     // standard linear-gradient
 
-    /* stylelint-disable value-list-comma-newline-after */
-
-    /* Lint causes issues with radial legacy value and lint exceptions dont work in maps */
     $direction-map: (
       vertical: (
-        legacy: top,
-        standard: to bottom,
+        legacy: "top",
+        standard: "to bottom",
         type: linear
       ),
       horizontal: (
-        legacy: left,
-        standard: to right,
+        legacy: "left",
+        standard: "to right",
         type: linear
       ),
       radial: (
-        legacy: center, ellipse cover,
-        standard: ellipse at center,
+        legacy: "center, ellipse cover",
+        standard: "ellipse at center",
         type: radial
       )
     );
-    /* stylelint-enable */
 
     // Check if direction exists in direction map:
     @if map-has-key($direction-map, $direction) {
@@ -75,10 +71,10 @@
       }
 
       background-color: $endColor; // Fallback for browsers lacking css gradient
-      background-image: -webkit-#{$type}-gradient($direction-legacy, $gradient-color-points);
-      background-image: -moz-#{$type}-gradient($direction-legacy, $gradient-color-points);
-      background-image: -o-#{$type}-gradient($direction-legacy, $gradient-color-points);
-      background-image: #{$type}-gradient($direction-standard, $gradient-color-points);
+      background-image: -webkit-#{$type}-gradient(#{$direction-legacy}, $gradient-color-points);
+      background-image: -moz-#{$type}-gradient(#{$direction-legacy}, $gradient-color-points);
+      background-image: -o-#{$type}-gradient(#{$direction-legacy}, $gradient-color-points);
+      background-image: #{$type}-gradient(#{$direction-standard}, $gradient-color-points);
     }
 
     @else {
