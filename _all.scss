@@ -70,6 +70,8 @@
  *                      50% width) or `.u-2/3@large` (make something 66.666%
  *                      width but only on large screens). Most commonly used in
  *                      conjunction with our layout system.
+ * Vertical align.......A helper utility allowing an element to be vertically
+                        aligned within its parent container.
  * ie9..................Various fixes to bugs in IE9.
  * Debug................Enabling debugging mode will point out various errors
  *                      and mistakes in our HTML.
@@ -123,5 +125,6 @@
 @import "utilities/typography";
 @import "utilities/spacing";
 @import "utilities/widths";
+@import "utilities/vertical-align";
 @import "utilities/ie9";
 @import "utilities/debug";
