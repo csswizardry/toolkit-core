@@ -9,7 +9,6 @@
  */
 
 // Settings
-@import "settings/version";
 @import "settings/config";
 @import "settings/globals";
 @import "settings/colors";
@@ -18,7 +17,6 @@
 
 // Tools
 @import "../sass-mq/mq";
-@import "../sass-deprecate/index";
 @import "tools/functions";
 @import "tools/mixins";
 @import "tools/typography";
