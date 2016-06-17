@@ -1,4 +1,13 @@
-# Changelog for Toolkit Core v0.3.15
+# Toolkit Core v0.4.0
+
+## 1. Enhancements
+- [settings] Set settings maps to `!default` to enable easier overwriting of values if needed
+
+## 2. Deprecations
+- [sass-deprecate] We removed the sass-deprecate library in favour of changelogs and improved release notes
+
+
+# Toolkit Core v0.3.15
 
 ## 1. Enhancements
 - [utilities] Added `.u-vertical-align` helper to allow vertical centering of elements
@@ -14,4 +23,3 @@
 
 ## 3. Deprecations
 - [defence] Moved defence to `toolkit-ui`
-- [sass-deprecate] We removed the sass-deprecate library in favour of changelogs and improved release notes
