@@ -7,8 +7,7 @@
     "test": "./node_modules/mocha/bin/mocha ./test/sass.js",
     "lint": "stylelint ./**/*.scss --syntax scss",
     "build": "cat _all.scss | node-sass --include-path node_modules/ --output-style compressed --precision 9 > dist/core.css",
-    "build-circle": "mkdir dist && npm run build",
-    "version": "bash scripts/update-version.sh"
+    "build-circle": "mkdir dist && npm run build"
   },
   "pre-commit": [
     "lint",
@@ -25,7 +24,6 @@
   },
   "homepage": "https://github.com/sky-uk/toolkit-core#readme",
   "dependencies": {
-    "sass-deprecate": "^1.1.0",
     "sass-mq": "^3.2.6"
   },
   "orion": {
