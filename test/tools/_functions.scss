@@ -8,6 +8,13 @@
 // ===========================================
 
 @mixin functions_before() {
+  $text: (
+    testKey: (
+      small: 18px,
+      large: 20px
+    )
+  ) !global;
+
   $gradients: (
     testKey: (
       end: #000,
@@ -18,6 +25,51 @@
   $colors: (
     testColor: #bada55
   ) !global;
+}
+
+// $text map reader
+// ===========================================
+
+// Function to get text instead of using `map-get`.
+@function text($key, $variant:large) {
+  @if map-has-key($text, $key) {
+    @if ($variant != null) {
+      @return map-get(map-get($text, $key), $variant);
+    }
+
+    @return map-get($text, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $text.";
+  @return null;
+}
+
+// $text map reader
+// ===========================================
+
+@include test-module("@function text") {
+  @include functions_before();
+
+  @include test("should return a large size value for given key") {
+    $actual: text("testKey", large);
+    $expected: 20px;
+
+    @include assert-equal($actual, $expected);
+  }
+
+  @include test("should return a small size value for given key") {
+    $actual: text("testKey", small);
+    $expected: 18px;
+
+    @include assert-equal($actual, $expected);
+  }
+
+  @include test("should return a large size value if no variant is provided") {
+    $actual: text("testKey");
+    $expected: 20px;
+
+    @include assert-equal($actual, $expected);
+  }
 }
 
 // $gradients map reader

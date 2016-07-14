@@ -2,6 +2,23 @@
 // TOOLS / FUNCTIONS
 // =============================================================================
 
+// $text map reader
+// ===========================================
+
+// Function to get text instead of using `map-get`.
+@function text($key, $variant:large) {
+  @if map-has-key($text, $key) {
+    @if ($variant != null) {
+      @return map-get(map-get($text, $key), $variant);
+    }
+
+    @return map-get($text, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $text.";
+  @return null;
+}
+
 // $colors map reader
 // ===========================================
 
