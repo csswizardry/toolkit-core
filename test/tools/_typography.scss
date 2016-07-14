@@ -20,7 +20,7 @@
 
   @include test("should return font size in pixels and rems") {
     @include assert("pixels and rems should be compiled") {
-      @include input {
+      @include output {
         @include font-size(18px);
       }
 
@@ -34,7 +34,7 @@
 
   @include test("should return the provided line height") {
     @include assert("line height should be compiled") {
-      @include input {
+      @include output {
         @include font-size(18px, 1.8);
       }
 
