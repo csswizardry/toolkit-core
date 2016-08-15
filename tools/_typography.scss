@@ -49,10 +49,12 @@
 //     font-size: 12px;
 //     font-size: 0.75rem;
 // }
-@mixin font-size($font-size, $line-height: auto) {
-  font-size: $font-size;
-  font-size: ($font-size / $global-font-size) * 1rem;
 
+@warn "TODO: Handling multiple line heights";
+@warn "TODO: Error messages";
+@warn "TODO: Rewrite tests";
+
+@mixin line-height($font-size, $line-height) {
   @if $line-height == auto {
     line-height: ceil($font-size / $global-line-height) * ($global-line-height / $font-size);
   }
@@ -65,5 +67,28 @@
     @elseif ($line-height != none and $line-height != false) {
       @warn "D’oh! ‘#{$line-height}’ is not a valid value for `line-height`.";
     }
+  }
+}
+
+@mixin font-size($font-size, $line-height: auto, $responsive: true) {
+
+  $font-size-small: text($font-size, small);
+  $font-size-large: text($font-size, large);
+
+  @if $responsive == false {
+    font-size: $font-size-large;
+    font-size: ($font-size-large / $global-font-size) * 1rem;
+  }
+
+  @else {
+    @include mq($from: medium) {
+      @include line-height($font-size-large, auto);
+      font-size: $font-size-large;
+      font-size: ($font-size-large / $global-font-size) * 1rem;
+    }
+
+    @include line-height($font-size-small, auto);
+    font-size: $font-size-small;
+    font-size: ($font-size-small / $global-font-size) * 1rem;
   }
 }
