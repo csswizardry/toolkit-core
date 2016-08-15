@@ -6,89 +6,22 @@
 // ===========================================
 
 // Create a fully formed type style (sizing and vertical rhythm) by passing in a
-// single value, e.g.:
+// single value, e.g:
 //
 // .foo {
-//     @include font-size(12px);
+//     @include font-size(text-body);
 // }
 //
-// This will generate a rem-based font-size with its pixel fallback, as well as
-// a unitless line-height which will place the element on your baseline, e.g.:
+// This will generate a rem-based font-size with its pixel fallback e.g:
 //
 // .foo {
-//     font-size: 12px;
-//     font-size: 0.75rem;
-//     line-height: 2;
+//     font-size: 20px;
+//     font-size: 1rem;
 // }
 //
-// If you do not want to generate you a line-height automatically, you simply
-// pass in your own as a second paramater:
-//
-// .foo {
-//     @include font-size(12px, 1.5);
-// }
-//
-// This will yield:
-//
-// .foo {
-//     font-size: 12px;
-//     font-size: 0.75rem;
-//     line-height: 1.5;
-// }
-//
-// This parameter can be any integer, ‘inherit’, or ‘normal’. If you don’t want
-// a line-height at all, pass in a second paramater of ‘none’ or ‘false’:
-//
-// .foo {
-//     @include font-size(12px, none);
-// }
-//
-// This will yield:
-//
-// .foo {
-//     font-size: 12px;
-//     font-size: 0.75rem;
-// }
 
-@warn "TODO: Handling multiple line heights";
-@warn "TODO: Error messages";
-@warn "TODO: Rewrite tests";
-
-@mixin line-height($font-size, $line-height) {
-  @if $line-height == auto {
-    line-height: ceil($font-size / $global-line-height) * ($global-line-height / $font-size);
-  }
-
-  @else {
-    @if (type-of($line-height) == number or $line-height == inherit or $line-height == normal) {
-      line-height: $line-height;
-    }
-
-    @elseif ($line-height != none and $line-height != false) {
-      @warn "D’oh! ‘#{$line-height}’ is not a valid value for `line-height`.";
-    }
-  }
-}
-
-@mixin font-size($font-size, $line-height: auto, $responsive: true) {
-
-  $font-size-small: text($font-size, small);
-  $font-size-large: text($font-size, large);
-
-  @if $responsive == false {
-    font-size: $font-size-large;
-    font-size: ($font-size-large / $global-font-size) * 1rem;
-  }
-
-  @else {
-    @include mq($from: medium) {
-      @include line-height($font-size-large, auto);
-      font-size: $font-size-large;
-      font-size: ($font-size-large / $global-font-size) * 1rem;
-    }
-
-    @include line-height($font-size-small, auto);
-    font-size: $font-size-small;
-    font-size: ($font-size-small / $global-font-size) * 1rem;
-  }
+@mixin font-size($key, $variant:large) {
+  $font-size: text($key, $variant);
+  font-size: $font-size;
+  font-size: ($font-size / $global-font-size) * 1rem;
 }

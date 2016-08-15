@@ -9,7 +9,7 @@
 // For example:
 //
 //   .foo {
-//     font-size: text(heading-alpha, large);
+//     font-size: text(heading-alpha, large);s
 //   }
 $text: (
   heading-alpha: (
@@ -29,12 +29,12 @@ $text: (
     large: 28px
   ),
   text-lead: (
-    small: $global-font-size,
+    small: 20px,
     large: 22px
   ),
   text-body: (
     small: 18px,
-    large: $global-font-size
+    large: 20px
   ),
   text-lead-small: (
     small: 16px,
