@@ -83,8 +83,8 @@ $global-spacing-unit: 24px !default;
   padding-left: $global-spacing-unit;
 
   @if ($use-markup-fix == false) {
-    //font-size: 1rem;
-    @include font-size($global-font-size);
+    font-size: $global-font-size;
+    font-size: ($global-font-size / $global-font-size) * 1rem;
   }
 
 }
