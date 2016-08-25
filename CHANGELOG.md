@@ -6,7 +6,7 @@
 - [sass-deprecate] Left-over code from sass-deprecate removed.
 
 ## 2. Deprecations
-- [legacy-typography] We removed the previous typographic variables in favour of a responsive approach. To deprecate gracefully, a toggle variable has been provided in settings/config.
+- [legacy-typography] We removed the previous typographic variables in favour of a responsive approach. To deprecate gracefully, a toggle variable has been provided in settings/config. To continue using the previous classes set `$legacy-typography: true;` at the very top of your sass import, before toolkit-core.
 
 
 # Toolkit Core v0.4.0
