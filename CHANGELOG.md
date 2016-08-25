@@ -1,3 +1,14 @@
+# Toolkit Core v0.5.0
+
+## 1. Enhancements
+- [gradients] Sky Cinema gradient implemented to `$gradients`, replacing Sky Movies.
+- [typography] Typographic scale implemented in a responsive sass-map under `$text`.
+- [sass-deprecate] Left-over code from sass-deprecate removed.
+
+## 2. Deprecations
+- [legacy-typography] We removed the previous typographic variables in favour of a responsive approach. To deprecate gracefully, a toggle variable has been provided in settings/config. To continue using the previous classes set `$legacy-typography: true;` at the very top of your sass import, before toolkit-core.
+
+
 # Toolkit Core v0.4.0
 
 ## 1. Enhancements

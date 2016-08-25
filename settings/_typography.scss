@@ -2,17 +2,50 @@
 // SETTINGS / TYPOGRAPHY
 // =============================================================================
 
-// Heading-level typography
-// ==============================================
-
-$text-alpha: 62px !default;
-$text-beta: 48px !default;
-$text-gamma: 36px !default;
-$text-delta: 28px !default;
-
-// Text-level typography
-// ==============================================
-
-$text-body: $global-font-size;
-$text-body-small: 18px !default;
-$text-caption: 14px !default;
+// Our brand and project font-sizes are held in maps. Access these using:
+//
+//   text($KEY, $VARIANT)
+//
+// For example:
+//
+//   .foo {
+//     font-size: text(heading-alpha, large);
+//   }
+$text: (
+  heading-alpha: (
+    small: 32px,
+    large: 62px
+  ),
+  heading-bravo: (
+    small: 28px,
+    large: 48px
+  ),
+  heading-charlie: (
+    small: 25px,
+    large: 36px
+  ),
+  heading-delta: (
+    small: 22px,
+    large: 28px
+  ),
+  text-lead: (
+    small: 20px,
+    large: 22px
+  ),
+  text-body: (
+    small: 18px,
+    large: 20px
+  ),
+  text-lead-small: (
+    small: 16px,
+    large: 18px
+  ),
+  text-body-small: (
+    small: 16px,
+    large: 16px
+  ),
+  text-smallprint: (
+    small: 14px,
+    large: 14px
+  )
+) !default;
