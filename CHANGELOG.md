@@ -1,3 +1,10 @@
+# Toolkit Core v0.5.1
+
+## 1. Bug Fixes
+- [page] Solid bg fallback for IE9 to replace broken gradient.
+
+===
+
 # Toolkit Core v0.5.0
 
 ## 1. Enhancements
