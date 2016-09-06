@@ -16,8 +16,7 @@
   @include background-gradient("small");
 
   @include mq($from: medium) {
-    background-color: #c9c7d1;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c9c7d1", endColorstr="#fefefe", GradientType=1);
+    background-color: #fefefe;
     background-image: -webkit-linear-gradient(left, #c9c7d1 0%, #e5e5ea 6%, #fefefe 20%, #fefefe 80%, #e5e5ea 94%, #c9c7d1 100%);
     background-image: -moz-linear-gradient(left, #c9c7d1 0%, #e5e5ea 6%, #fefefe 20%, #fefefe 80%, #e5e5ea 94%, #c9c7d1 100%);
     background-image: -o-linear-gradient(left, #c9c7d1 0%, #e5e5ea 6%, #fefefe 20%, #fefefe 80%, #e5e5ea 94%, #c9c7d1 100%);
