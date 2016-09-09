@@ -55,3 +55,17 @@
   @warn "Unknown `#{$key}` in $gradients.";
   @return null;
 }
+
+// Strip units
+// ===========================================
+
+// Function to remove the unit from a value i.e. strip-unit(20px) would return 20.
+@function strip-unit($num) {
+  @if type_of($num) == number {
+    @return $num / ($num * 0 + 1);
+  }
+
+  @else {
+    @warn "Value must be a number i.e. 12, 24px etc.";
+  }
+}
