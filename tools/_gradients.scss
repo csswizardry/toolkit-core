@@ -11,7 +11,7 @@
 // Example usage:
 //
 //   html {
-//     @include background-gradient(sky-sports, horizontal);
+//     @include background-gradient(sky-sports, horizontal-invert, 0% 50%);
 //   }
 //
 // OPTIONS
@@ -21,12 +21,15 @@
 //    - "horizontal" Horizontal 3 point gradient
 //    - "radial" Radial 2 point gradient
 
-@mixin background-gradient($key, $direction:"vertical") {
+@mixin background-gradient($key, $direction:"vertical", $start-stop:0% 100%) {
   @if map-has-key($gradients, $key) {
 
     // Set values from $gradients variable map to local variables
     $startColor: gradient($key, start);
     $endColor: gradient($key, end);
+
+    $startPoint: nth($start-stop, 1);
+    $endPoint: nth($start-stop, 2);
 
     // The direction map stores values for the direction for both prefixed and
     // standard linear-gradient
@@ -35,6 +38,11 @@
       vertical: (
         legacy: "top",
         standard: "to bottom",
+        type: linear
+      ),
+      vertical-invert: (
+        legacy: "bottom",
+        standard: "to top",
         type: linear
       ),
       horizontal: (
@@ -58,12 +66,12 @@
       // Fetch linear or radial
       $type: map-get(map-get($direction-map, $direction), type);
 
-      $gradient-color-points: $startColor 0%, $endColor 100% !default;
+      $gradient-color-points: $startColor $startPoint, $endColor $endPoint !default;
 
       // Force horizontal to conform to brand 3 point gradient and vertical or
       // radial to a 2 point gradient.
       @if ($direction == "radial") {
-        $gradient-color-points: $endColor 0%, $startColor 100%;
+        $gradient-color-points: $endColor $startPoint, $startColor $endPoint;
       }
 
       @else if ($direction == "horizontal") {
