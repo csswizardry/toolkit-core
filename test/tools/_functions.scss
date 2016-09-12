@@ -9,8 +9,6 @@
 // ===========================================
 
 @mixin functions_before() {
-  $global-font-size: 20px;
-
   $text: (
     testKey: (
       small: 18px,
