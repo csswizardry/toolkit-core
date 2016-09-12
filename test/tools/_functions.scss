@@ -113,3 +113,24 @@
     @include assert-equal($actual, $expected);
   }
 }
+
+// $colors map reader
+// ===========================================
+
+@include test-module("@function strip-unit") {
+  @include functions_before();
+
+  @include test("returns a number with no units when a number with units is supplied.") {
+    $actual: strip-unit(20vw);
+    $expected: 20;
+
+    @include assert-equal($actual, $expected);
+  }
+
+  @include test("returns a number with no units when a number with no units is supplied.") {
+    $actual: strip-unit(400);
+    $expected: 400;
+
+    @include assert-equal($actual, $expected);
+  }
+}
