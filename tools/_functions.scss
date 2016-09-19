@@ -75,9 +75,9 @@
 
 // Function to remove the unit from a value to em i.e. strip-unit(30px) would
 // return 1.5em assuming $global-font-size was 20px.
-@function convert-to-em($value) {
+@function convert-to-em($value, $base-font-size: $global-font-size) {
   @if unit($value) == "px" {
-    @return (strip-unit($value / $global-font-size)) * 1em;
+    @return (strip-unit($value / $base-font-size)) * 1em;
   }
 
   @if unit($value) == "rem" {
