@@ -155,4 +155,11 @@
 
     @include assert-equal($actual, $expected);
   }
+
+  @include test("returns the correct value when different base font size is set.") {
+    $actual: convert-to-em(20px, 10px);
+    $expected: 2em;
+
+    @include assert-equal($actual, $expected);
+  }
 }
