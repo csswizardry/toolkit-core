@@ -5,6 +5,7 @@
 - [functions] Added `convert-to-em` helper to convert em and px values to the equivalent em value ie `convert-to-em(40px) = 2em`.
 - [functions] Added `strip-unit` helper to remove units from a value. ie `strip-unit(400px) = 400`.
 - [gradients] `background-gradient` can now utilise an inverted horizontal direction and percentage overrides.
+- [settings] Update small breakpoint to 420px.
 
 ===
 
