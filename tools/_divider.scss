@@ -55,13 +55,16 @@
     // Fetch other gradient properties
     $color-points: transparent, $color, transparent;
     $position: map-get(map-get($directions, $direction), position);
+    // Set vendor prefixes for use on legacy gradients
+    $vendor-prefixes: "webkit", "moz", "ms", "o";
 
-    background-image: -webkit-linear-gradient(#{$direction-legacy}, $color-points);
-    background-image: -moz-linear-gradient(#{$direction-legacy}, $color-points);
-    background-image: -o-linear-gradient(#{$direction-legacy}, $color-points);
-    background-image: linear-gradient(#{$direction-standard}, $color-points);
-    background-position: #{$position};
-    background-repeat: no-repeat;
+    background: $color;
+
+    @each $prefix in $vendor-prefixes {
+      background: -#{$prefix}-linear-gradient(#{$direction-legacy}, $color-points);
+    }
+
+    background: linear-gradient(#{$direction-standard}, $color-points);
   }
 
   @else {
@@ -119,10 +122,13 @@
     $legacy: map-get(map-get($directions, $direction), legacy);
     // Fetch other gradient properties
     $color-points: $color, transparent 40%;
+    // Set vendor prefixes for use on legacy gradients
+    $vendor-prefixes: "webkit", "moz", "ms", "o";
 
-    background: -webkit-radial-gradient(#{$legacy}, $color-points);
-    background: -moz-radial-gradient(#{$legacy}, $color-points);
-    background: -ms-radial-gradient(#{$legacy}, $color-points);
+    @each $prefix in $vendor-prefixes {
+      background: -#{$prefix}-radial-gradient(#{$legacy}, $color-points);
+    }
+
     background: radial-gradient(#{$standard}, $color-points);
   }
 

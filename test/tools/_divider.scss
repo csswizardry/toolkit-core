@@ -31,12 +31,12 @@
       }
 
       @include expect {
-        background-image: -webkit-linear-gradient(left, transparent, #c0c0c0, transparent);
-        background-image: -moz-linear-gradient(left, transparent, #c0c0c0, transparent);
-        background-image: -o-linear-gradient(left, transparent, #c0c0c0, transparent);
-        background-image: linear-gradient(to right, transparent, #c0c0c0, transparent);
-        background-position: center bottom;
-        background-repeat: no-repeat;
+        background: #c0c0c0;
+        background: -webkit-linear-gradient(left, transparent, #c0c0c0, transparent);
+        background: -moz-linear-gradient(left, transparent, #c0c0c0, transparent);
+        background: -ms-linear-gradient(left, transparent, #c0c0c0, transparent);
+        background: -o-linear-gradient(left, transparent, #c0c0c0, transparent);
+        background: linear-gradient(to right, transparent, #c0c0c0, transparent);
       }
     }
   }
@@ -48,12 +48,12 @@
       }
 
       @include expect {
-        background-image: -webkit-linear-gradient(top, transparent, #c0c0c0, transparent);
-        background-image: -moz-linear-gradient(top, transparent, #c0c0c0, transparent);
-        background-image: -o-linear-gradient(top, transparent, #c0c0c0, transparent);
-        background-image: linear-gradient(to bottom, transparent, #c0c0c0, transparent);
-        background-position: right bottom;
-        background-repeat: no-repeat;
+        background: #c0c0c0;
+        background: -webkit-linear-gradient(top, transparent, #c0c0c0, transparent);
+        background: -moz-linear-gradient(top, transparent, #c0c0c0, transparent);
+        background: -ms-linear-gradient(top, transparent, #c0c0c0, transparent);
+        background: -o-linear-gradient(top, transparent, #c0c0c0, transparent);
+        background: linear-gradient(to bottom, transparent, #c0c0c0, transparent);
       }
     }
   }
@@ -65,12 +65,12 @@
       }
 
       @include expect {
-        background-image: -webkit-linear-gradient(top, transparent, #bada55, transparent);
-        background-image: -moz-linear-gradient(top, transparent, #bada55, transparent);
-        background-image: -o-linear-gradient(top, transparent, #bada55, transparent);
-        background-image: linear-gradient(to bottom, transparent, #bada55, transparent);
-        background-position: right bottom;
-        background-repeat: no-repeat;
+        background: #bada55;
+        background: -webkit-linear-gradient(top, transparent, #bada55, transparent);
+        background: -moz-linear-gradient(top, transparent, #bada55, transparent);
+        background: -ms-linear-gradient(top, transparent, #bada55, transparent);
+        background: -o-linear-gradient(top, transparent, #bada55, transparent);
+        background: linear-gradient(to bottom, transparent, #bada55, transparent);
       }
     }
   }
@@ -90,6 +90,7 @@
         background: -webkit-radial-gradient(50% 0%, rgba(74, 74, 74, 0.15), transparent 40%);
         background: -moz-radial-gradient(50% 0%, rgba(74, 74, 74, 0.15), transparent 40%);
         background: -ms-radial-gradient(50% 0%, rgba(74, 74, 74, 0.15), transparent 40%);
+        background: -o-radial-gradient(50% 0%, rgba(74, 74, 74, 0.15), transparent 40%);
         background: radial-gradient(at 50% 0%, rgba(74, 74, 74, 0.15), transparent 40%);
       }
     }
@@ -105,6 +106,7 @@
         background: -webkit-radial-gradient(0 50%, farthest-corner, rgba(74, 74, 74, 0.15), transparent 40%);
         background: -moz-radial-gradient(0 50%, farthest-corner, rgba(74, 74, 74, 0.15), transparent 40%);
         background: -ms-radial-gradient(0 50%, farthest-corner, rgba(74, 74, 74, 0.15), transparent 40%);
+        background: -o-radial-gradient(0 50%, farthest-corner, rgba(74, 74, 74, 0.15), transparent 40%);
         background: radial-gradient(farthest-corner at 0 50%, rgba(74, 74, 74, 0.15), transparent 40%);
       }
     }
@@ -120,6 +122,7 @@
         background: -webkit-radial-gradient(0 50%, farthest-corner, #000, transparent 40%);
         background: -moz-radial-gradient(0 50%, farthest-corner, #000, transparent 40%);
         background: -ms-radial-gradient(0 50%, farthest-corner, #000, transparent 40%);
+        background: -o-radial-gradient(0 50%, farthest-corner, #000, transparent 40%);
         background: radial-gradient(farthest-corner at 0 50%, #000, transparent 40%);
       }
     }
