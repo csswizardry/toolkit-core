@@ -20,6 +20,8 @@
  * Mixins...............A collection of custom Sass mixins.
  * Typography...........Mixins specifically for helping with setting type.
  * Gradients............Mixins specifically for helping with creating gradients.
+ * Divider..............Mixins specifically for helping with creating styles
+ *                      for use in dividers.
  * Page.................Mixin specifically for helping with creating the
  *                      default page background.
  *
@@ -87,6 +89,7 @@
 @import "tools/mixins";
 @import "tools/typography";
 @import "tools/gradients";
+@import "tools/divider";
 @import "tools/page";
 
 // Generic

@@ -1,6 +1,9 @@
 # Toolkit Core v0.5.2
 
-## 1. Enhancements
+## 1. Features
+- [divider] New mixins for creating divider gradient border and shadow.
+
+## 2. Enhancements
 - [colors] Added `mid` gradient to `gradients` variable map.
 - [functions] Added `convert-to-em` helper to convert em and px values to the equivalent em value ie `convert-to-em(40px) = 2em` with optional base font-size.
 - [functions] Added `strip-unit` helper to remove units from a value. ie `strip-unit(400px) = 400`.
