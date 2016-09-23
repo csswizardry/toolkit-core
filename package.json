@@ -1,6 +1,6 @@
 {
   "name": "sky-toolkit-core",
-  "version": "0.3.4",
+  "version": "0.5.2",
   "description": "The core framework of Sky's web toolkit",
   "main": "index.js",
   "scripts": {
@@ -24,7 +24,6 @@
   },
   "homepage": "https://github.com/sky-uk/toolkit-core#readme",
   "dependencies": {
-    "sass-deprecate": "^1.1.0",
     "sass-mq": "^3.2.6"
   },
   "orion": {
@@ -36,7 +35,7 @@
     "mocha": "^2.4.5",
     "node-sass": "^3.4.2",
     "pre-commit": "^1.1.2",
-    "sass-true": "^2.0.3",
+    "sass-true": "2.0.3",
     "stylelint": "^5.2.1",
     "stylelint-selector-bem-pattern": "^0.2.1",
     "stylelint-statement-max-nesting-depth": "^2.0.1"

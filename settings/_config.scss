@@ -2,16 +2,16 @@
 // SETTINGS / CONFIG
 // =============================================================================
 
-// Sass Deprecate Mode
-// Coresponds to `$app-version` set in settings/version of the project.
-$deprecate-mode: "verbose";
+// Graceful deprecation of previous Typography classes
+// If you need time to amend, simply switch this to true;
+$legacy-typography: false !default;
 
 // Config-level settings (environment switches, debugging modes, etc.).
 
 $config: (
   env:   dev,
   debug: false,
-);
+) !default;
 
 // Little helper function to retreive information from our config array. E.g.:
 //

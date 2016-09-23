@@ -23,11 +23,15 @@ $colors: (
   text:      #4a4a4a,
   black:     #000,
   white:     #fff
-);
+) !default;
 
 $gradients: (
   large: (
     start: #cdccd4,
+    end: #fff
+  ),
+  mid: (
+    start: #e6e6ea,
     end: #fff
   ),
   small: (
@@ -54,6 +58,10 @@ $gradients: (
     start: #5b1139,
     end: #7f0c2d
   ),
+  sky-cinema: (
+    start: #903,
+    end: #cb0033
+  ),
   sky-kids: (
     start: #4b007e,
     end: #652d9f
@@ -61,10 +69,6 @@ $gradients: (
   sky-living: (
     start: #69879b,
     end: #69a0b4
-  ),
-  sky-movies: (
-    start: #67135a,
-    end: #8f2679
   ),
   sky-news: (
     start: #061b55,
@@ -78,4 +82,4 @@ $gradients: (
     start: #036,
     end: #0e429e
   )
-);
+) !default;

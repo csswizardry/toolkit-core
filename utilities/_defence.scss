@@ -14,6 +14,8 @@
   background: #fff !important;
   font-size: 16px !important;
   box-sizing: content-box !important;
+  -moz-osx-font-smoothing: initial !important;
+  -webkit-font-smoothing: initial !important;
 
   /**
    * Fixed media-query value set by the current masthead.
@@ -29,6 +31,8 @@
 .skycom-footer {
   font-size: 16px !important;
   box-sizing: content-box !important;
+  -moz-osx-font-smoothing: initial !important;
+  -webkit-font-smoothing: initial !important;
 }
 
 .skycom-footer__nav {
@@ -50,8 +54,8 @@
  */
 @include mq($from: classic-masthead) {
   a {
-    color: color(brand) !important;
-    text-decoration: none !important;
+    color: color(brand);
+    text-decoration: none;
   }
 }
 

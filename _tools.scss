@@ -9,7 +9,6 @@
  */
 
 // Settings
-@import "settings/version";
 @import "settings/config";
 @import "settings/globals";
 @import "settings/colors";
@@ -17,8 +16,10 @@
 @import "settings/breakpoints";
 
 // Tools
-@import "sass-mq/mq";
+@import "../sass-mq/mq";
 @import "tools/functions";
 @import "tools/mixins";
 @import "tools/typography";
 @import "tools/gradients";
+@import "tools/divider";
+@import "tools/page";

@@ -18,8 +18,9 @@
   }
 
   /**
-   * Remove custom icon on form select inputs
+   * Remove custom icon and gradient overflow on form select inputs
    */
+  .c-form-select::before,
   .c-form-select::after {
     content: normal;
   }
