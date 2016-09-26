@@ -1,4 +1,4 @@
-# Toolkit Core v0.5.2
+# Toolkit Core v1.0.0
 
 ## 1. Features
 - [divider] New mixins for creating divider gradient border and shadow.
