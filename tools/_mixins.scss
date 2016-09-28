@@ -27,6 +27,27 @@
   }
 }
 
+// Focus outline
+// ===========================================
+
+// Generates a consistent focus effect
+@mixin focus-outline($color: default) {
+
+  $focus-shadow-color: color(highlight);
+  $focus-shadow-color-invert: color(white);
+  $focus-shadow-intensity: 0.75;
+  $focus-shadow-x: 0;
+  $focus-shadow-y: 1px;
+  $focus-shadow-blur: 15px;
+  $focus-shadow-spread: 3px;
+
+  $focus-shadow: unquote($global-shadow-x + " " + $global-shadow-y + " " + $global-shadow-blur + " " + $global-shadow-spread + " " + rgba($global-shadow-color, $global-shadow-intensity));
+
+  @if ($color == "default") {
+    box-shadow: $focus-shadow;
+  }
+}
+
 // Making accessible hover/focus states simpler
 // ===========================================
 

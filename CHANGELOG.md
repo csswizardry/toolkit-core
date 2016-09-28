@@ -1,8 +1,9 @@
 # Toolkit Core v1.0.0
 
 ## 1. Features
-- [divider] New mixins for creating divider gradient border and shadow.
 - [colors] `ui-` prefixed colors have moved to a `grey-` prefix for greater flexibility.
+- [divider] New mixins for creating divider gradient border and shadow.
+- [mixins] `focus-styles` for creating consistent keyboard focus effects.
 
 ## 2. Enhancements
 - [colors] Added `mid` gradient to `gradients` variable map.
