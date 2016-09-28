@@ -10,7 +10,7 @@
 // Example usage:
 //
 //   .c-divider--top {
-//     @include divider-gradient(top, color(keyline));
+//     @include divider-gradient(top, color(grey-20));
 //   }
 //
 // OPTIONS
@@ -20,7 +20,7 @@
 //    - "bottom" Creates a horizontal gradient for the bottom edge
 //    - "left" Creates a vertical gradient for the left side
 
-@mixin divider-gradient($direction: "bottom", $color: color(keyline)) {
+@mixin divider-gradient($direction: "bottom", $color: color(grey-20)) {
   // The direction map stores values for the direction for both legacy prefixed
   // and standard gradients for the divider line.
 
