@@ -30,21 +30,20 @@
 // Focus outline
 // ===========================================
 
-// Generates a consistent focus effect
-@mixin focus-outline($color: default) {
-
-  $focus-shadow-color: color(highlight);
-  $focus-shadow-color-invert: color(white);
-  $focus-shadow-intensity: 0.75;
-  $focus-shadow-x: 0;
-  $focus-shadow-y: 1px;
-  $focus-shadow-blur: 15px;
-  $focus-shadow-spread: 3px;
-
-  $focus-shadow: unquote($global-shadow-x + " " + $global-shadow-y + " " + $global-shadow-blur + " " + $global-shadow-spread + " " + rgba($global-shadow-color, $global-shadow-intensity));
+// Generates a consistent outline shadow for use on `:focus` or `.has-focus`.
+@mixin focus-styles($color: default) {
+  outline: none;
 
   @if ($color == "default") {
-    box-shadow: $focus-shadow;
+    box-shadow: 0 1px 3px rgba(color(black), 0.4), 0 1px 15px 3px rgba(color(highlight), 0.75);
+  }
+
+  @elseif ($color == "invert") {
+    box-shadow: 0 1px 3px rgba(color(black), 0.75), 0 1px 15px 3px rgba(color(white), 0.75);
+  }
+
+  @else {
+    @warn "`#{$color}` is not a valid outline color, it must be `default` or `invert`.";
   }
 }
 
