@@ -2,10 +2,6 @@
 // SETTINGS / CONFIG
 // =============================================================================
 
-// Graceful deprecation of previous Typography classes
-// If you need time to amend, simply switch this to true;
-$legacy-typography: false !default;
-
 // Config-level settings (environment switches, debugging modes, etc.).
 
 $config: (
