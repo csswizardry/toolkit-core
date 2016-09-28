@@ -2,6 +2,7 @@
 
 ## 1. Features
 - [divider] New mixins for creating divider gradient border and shadow.
+- [colors] `ui-` prefixed colors have moved to a `grey-` prefix for greater flexibility.
 
 ## 2. Enhancements
 - [colors] Added `mid` gradient to `gradients` variable map.
