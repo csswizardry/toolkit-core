@@ -24,7 +24,7 @@ What types of changes does your code introduce? Put an `x` in all the boxes that
 - [ ] New feature (non-breaking change which adds functionality)
 - [ ] Breaking change (fix or feature that would cause existing functionality to change)
 
-### Browser Support
+## Browser Support
 - [ ] Chrome
 - [ ] Edge
 - [ ] Firefox
