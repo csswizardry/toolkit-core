@@ -12,6 +12,7 @@
 - [functions] Added `strip-unit` helper to remove units from a value. ie `strip-unit(400px) = 400`.
 - [gradients] `background-gradient` can now utilise an inverted horizontal direction and percentage overrides.
 - [settings] Update small breakpoint to 420px.
+- [settings] Added global container max width as variable rather than hard-coding.
 
 ## 3. Deprecations
 - [legacy-typography] Config switch now fully deprecated.
