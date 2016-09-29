@@ -2,16 +2,8 @@
    OBJECTS / CONTAINER
    ========================================================================== */
 
-/**
- * Constraining wrapper element.
- *
- * 1. Overall usable width needs to be 1140px, but owing to
- *    `box-sizing: border-box;` we need to compound the values of the usable
- *    space and the desired paddings either side.
- */
-
 .o-container {
-  max-width: 1140px + ($global-spacing-unit * 2); /* [1] */
+  max-width: $global-container-max-width;
   padding-right: $global-spacing-unit;
   padding-left: $global-spacing-unit;
   margin-right: auto;
