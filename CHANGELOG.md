@@ -1,11 +1,14 @@
 # Toolkit Core v1.0.0
 
-## 1. Features
+## 1. Project Structure
+- devDependecies moved to Dependencies to enable sharing with `toolkit-ui`.
+
+## 2. Features
 - [colors] `ui-` prefixed colors have moved to a `grey-` prefix for greater flexibility.
 - [divider] New mixins for creating divider gradient border and shadow.
 - [mixins] `focus-styles` for creating consistent keyboard focus effects.
 
-## 2. Enhancements
+## 3. Enhancements
 - [colors] Added `mid` gradient to `gradients` variable map.
 - [forms] ie9 class to hide gradient text overflow for `c-form-select`.
 - [functions] Added `convert-to-em` helper to convert em and px values to the equivalent em value ie `convert-to-em(40px) = 2em` with optional base font-size.
