@@ -24,14 +24,7 @@
   },
   "homepage": "https://github.com/sky-uk/toolkit-core#readme",
   "dependencies": {
-    "sass-mq": "^3.2.6"
-  },
-  "orion": {
-    "default": {
-      "stylesheet": "dist/core.css"
-    }
-  },
-  "devDependencies": {
+    "sass-mq": "^3.2.6",
     "mocha": "^2.4.5",
     "node-sass": "^3.4.2",
     "pre-commit": "^1.1.2",
