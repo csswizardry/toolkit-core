@@ -13,6 +13,9 @@
 - [gradients] `background-gradient` can now utilise an inverted horizontal direction and percentage overrides.
 - [settings] Update small breakpoint to 420px.
 
+## 3. Deprecations
+- [legacy-typography] Config switch now fully deprecated.
+
 ===
 
 # Toolkit Core v0.5.1
