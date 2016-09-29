@@ -2,11 +2,6 @@
 // SETTINGS / GLOBALS
 // =============================================================================
 
-// Global container settings
-// ==============================================
-
-$global-container-max-width: 1140px + ($global-spacing-unit * 2);
-
 // Global typography settings
 // ==============================================
 
@@ -54,3 +49,8 @@ $global-spacing-unit-large: round(2 * $global-spacing-unit);
 @if ($global-spacing-unit != $global-line-height) {
   @error "The value of `$global-spacing-unit` must not be changed.";
 }
+
+// Global container settings
+// ==============================================
+
+$global-container-max-width: 1140px + ($global-spacing-unit * 2);
