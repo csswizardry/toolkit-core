@@ -2,8 +2,11 @@
    OBJECTS / CONTAINER
    ========================================================================== */
 
+// Sets our container max-width to match content allowing for padding.
+$container-width: 1140px + ($global-spacing-unit * 2);
+
 .o-container {
-  max-width: $global-container-max-width;
+  max-width: $container-width;
   padding-right: $global-spacing-unit;
   padding-left: $global-spacing-unit;
   margin-right: auto;
