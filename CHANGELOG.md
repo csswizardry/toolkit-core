@@ -5,20 +5,28 @@
 
 ## 2. Features
 - [colors] `ui-` prefixed colors have moved to a `grey-` prefix for greater flexibility.
-- [divider] New mixins for creating divider gradient border and shadow.
 - [mixins] `focus-styles` for creating consistent keyboard focus effects.
 
 ## 3. Enhancements
+- [settings] Added global container max width as variable rather than hard-coding.
+
+## 4. Deprecations
+- [legacy-typography] Config switch now fully deprecated.
+
+===
+
+# Toolkit Core v0.5.2
+
+## 1. Features
+- [divider] New mixins for creating divider gradient border and shadow.
+
+## 2. Enhancements
 - [colors] Added `mid` gradient to `gradients` variable map.
 - [forms] ie9 class to hide gradient text overflow for `c-form-select`.
 - [functions] Added `convert-to-em` helper to convert em and px values to the equivalent em value ie `convert-to-em(40px) = 2em` with optional base font-size.
 - [functions] Added `strip-unit` helper to remove units from a value. ie `strip-unit(400px) = 400`.
 - [gradients] `background-gradient` can now utilise an inverted horizontal direction and percentage overrides.
 - [settings] Update small breakpoint to 420px.
-- [settings] Added global container max width as variable rather than hard-coding.
-
-## 3. Deprecations
-- [legacy-typography] Config switch now fully deprecated.
 
 ===
 
