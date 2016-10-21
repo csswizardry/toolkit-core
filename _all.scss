@@ -6,24 +6,24 @@
  * CONTENTS
  *
  * SETTINGS
- * Config...............Configuration and environment settings.
- * Globals..............Globally available settings for the entire project.
- * Colors...............Brand colours are centrally managed for later use.
- * Typography...........Define our typographical settings in one place.
- * Breakpoints..........Hold sitewide breakpoint values in an array for use with
- *                      Sass MQ.
+ * All..................Because our Settings layer doesn’t actually produce any
+ *                      CSS, we can safely glob all of the files into one import
+ *                      without risk of bloating our compiled stylesheet.
+ *                      This also allows us to easily recycle all of our
+ *                      project-level settings into other Sass file/projects.
+ *                      e.g. `@import "sky-toolkit-core/tools";`
+ *                      Please see `settings/_all.scss` for a full table of
+ *                      contents.
  *
  * TOOLS
- * Sass MQ..............Neat little library for managing and using Media Queries
- *                      throughout the rest of the project.
- * Functions............A collection of custom Sass functions.
- * Mixins...............A collection of custom Sass mixins.
- * Typography...........Mixins specifically for helping with setting type.
- * Gradients............Mixins specifically for helping with creating gradients.
- * Divider..............Mixins specifically for helping with creating styles
- *                      for use in dividers.
- * Page.................Mixin specifically for helping with creating the
- *                      default page background.
+ * All..................Because our Tools layer doesn’t actually produce any
+ *                      CSS, we can safely glob all of the files into one import
+ *                      without risk of bloating our compiled stylesheet.
+ *                      This also allows us to easily recycle all of our
+ *                      project-level settings into other Sass file/projects.
+ *                      e.g. `@import "sky-toolkit-core/tools";`
+ *                      Please see `tools/_all.scss` for a full table of
+ *                      contents.
  *
  * GENERIC
  * Box-sizing...........Better default box-model.
@@ -77,20 +77,10 @@
  */
 
 // Settings
-@import "settings/config";
-@import "settings/globals";
-@import "settings/colors";
-@import "settings/typography";
-@import "settings/breakpoints";
+@import "settings/all";
 
 // Tools
-@import "../sass-mq/mq";
-@import "tools/functions";
-@import "tools/mixins";
-@import "tools/typography";
-@import "tools/gradients";
-@import "tools/divider";
-@import "tools/page";
+@import "tools/all";
 
 // Generic
 @import "generic/box-sizing";

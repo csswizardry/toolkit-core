@@ -1,7 +1,8 @@
 # Toolkit Core v1.0.0
 
-## 1. Project Structure
-- devDependecies moved to Dependencies to enable sharing with `toolkit-ui`.
+## 1. Structure
+- [project] devDependecies moved to Dependencies to enable sharing with `toolkit-ui`.
+- [imports] settings and tools now utilise `all` to share imports across `sky-toolkit-core/all` and `sky-toolkit-core/tools`.
 
 ## 2. Features
 - [colors] `ui-` prefixed colors have moved to a `grey-` prefix for greater flexibility.
