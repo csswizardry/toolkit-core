@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Tools
+   TOOLS IMPORTS
    ========================================================================== */
 
 /**
@@ -9,17 +9,7 @@
  */
 
 // Settings
-@import "settings/config";
-@import "settings/globals";
-@import "settings/colors";
-@import "settings/typography";
-@import "settings/breakpoints";
+@import "settings/all";
 
 // Tools
-@import "../sass-mq/mq";
-@import "tools/functions";
-@import "tools/mixins";
-@import "tools/typography";
-@import "tools/gradients";
-@import "tools/divider";
-@import "tools/page";
+@import "tools/all";
