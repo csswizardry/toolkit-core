@@ -11,7 +11,10 @@
 ## 3. Enhancements
 - [settings] Added global container max width as variable rather than hard-coding.
 
-## 4. Deprecations
+## 4. Bug Fixes
+- [page] Gradient orientation fixed for small devices.
+
+## 5. Deprecations
 - [legacy-typography] Config switch now fully deprecated.
 
 ===
