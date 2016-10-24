@@ -13,6 +13,7 @@
 
 ## 4. Bug Fixes
 - [page] Gradient orientation fixed for small devices.
+- [font-face] Prevent Sky Text from outputting if a custom font is defined.
 
 ## 5. Deprecations
 - [legacy-typography] Config switch now fully deprecated.
