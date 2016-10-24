@@ -13,7 +13,7 @@
 //   }
 
 @mixin background-page() {
-  @include background-gradient("small");
+  @include background-gradient("small", horizontal);
 
   @include mq($from: medium) {
     background-color: color(grey-10);
