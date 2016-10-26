@@ -8,7 +8,5 @@ general:
     - "package.json"
 
 test:
-  pre:
-    - npm install
   override:
     - npm run test-circle
