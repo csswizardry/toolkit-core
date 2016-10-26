@@ -1,5 +1,4 @@
 node_modules/
-build
 npm-debug.log
-dist
-_up-next/
+.DS_Store
+build/
