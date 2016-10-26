@@ -1,16 +1,12 @@
 machine:
   node:
-    version: 5.1.0
+    version: 6.1.0
 
 general:
   artifacts:
-    - "dist/"
+    - "build/"
     - "package.json"
 
 test:
-  post:
-    - npm run build-circle
-
-notify:
-  webhooks:
-    - url: https://secure.sky.com/blackjack/builds/circleci
+  override:
+    - npm run test-circle

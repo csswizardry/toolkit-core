@@ -1,13 +1,13 @@
 {
   "name": "sky-toolkit-core",
-  "version": "0.5.2",
-  "description": "The core framework of Sky's web toolkit",
+  "version": "1.0.0",
+  "description": "The core of Sky's CSS Toolkit",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha ./test/sass.js",
+    "test-circle": "npm run build && npm run test",
     "lint": "stylelint ./**/*.scss --syntax scss",
-    "build": "cat _all.scss | node-sass --include-path node_modules/ --output-style compressed --precision 9 > dist/core.css",
-    "build-circle": "mkdir dist && npm run build"
+    "build": "mkdir build && cat _all.scss | node-sass --include-path node_modules/ --output-style compressed --precision 9 > build/toolkit-core.css"
   },
   "pre-commit": [
     "lint",
@@ -17,21 +17,14 @@
     "type": "git",
     "url": "git+https://github.com/sky-uk/toolkit-core.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Sky UK",
+  "license": "BSD-3-Clause",
   "bugs": {
     "url": "https://github.com/sky-uk/toolkit-core/issues"
   },
   "homepage": "https://github.com/sky-uk/toolkit-core#readme",
   "dependencies": {
-    "sass-mq": "^3.2.6"
-  },
-  "orion": {
-    "default": {
-      "stylesheet": "dist/core.css"
-    }
-  },
-  "devDependencies": {
+    "sass-mq": "^3.2.6",
     "mocha": "^2.4.5",
     "node-sass": "^3.4.2",
     "pre-commit": "^1.1.2",

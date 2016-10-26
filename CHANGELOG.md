@@ -1,3 +1,25 @@
+# Toolkit Core v1.0.0
+
+## 1. Structure
+- [project] devDependecies moved to Dependencies to enable sharing with `toolkit-ui`.
+- [imports] settings and tools now utilise `all` to share imports across `sky-toolkit-core/all` and `sky-toolkit-core/tools`.
+
+## 2. Features
+- [colors] `ui-` prefixed colors have moved to a `grey-` prefix for greater flexibility.
+- [mixins] `focus-styles` for creating consistent keyboard focus effects.
+
+## 3. Enhancements
+- [settings] Added global container max width as variable rather than hard-coding.
+
+## 4. Bug Fixes
+- [page] Gradient orientation fixed for small devices.
+- [font-face] Prevent Sky Text from outputting if a custom font is defined.
+
+## 5. Deprecations
+- [legacy-typography] Config switch now fully deprecated.
+
+===
+
 # Toolkit Core v0.5.2
 
 ## 1. Features
