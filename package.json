@@ -1,7 +1,7 @@
 {
   "name": "sky-toolkit-core",
   "version": "1.0.0",
-  "description": "The core framework of Sky's web toolkit",
+  "description": "The core of Sky's CSS Toolkit",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha ./test/sass.js",
