@@ -1,0 +1,39 @@
+// =============================================================================
+// TEST / TOOLS / MIXINS UI
+// =============================================================================
+
+@import "../../tools/mixins-ui";
+
+// Test config
+// ===========================================
+
+// Add Panel Indicator to element
+// ===========================================
+
+// *Issue with mixins returning pseudo element styling incorrectly*
+
+@include test-module("@mixin panel-indicator") {
+
+  @include test("adds panel indicator") {
+    @include assert("sets default theme by default") {
+      @include input {
+        @include panel-indicator();
+      }
+
+      @include expect {
+        background-color: #fff;
+        box-shadow: inset 11px 11px 11px -11px #9f9f9f;
+      }
+    }
+
+    @include assert("sets dark theme if specified") {
+      @include input {
+        @include panel-indicator("dark");
+      }
+
+      @include expect {
+        box-shadow: inset 11px 11px 11px -11px #000;
+      }
+    }
+  }
+}
