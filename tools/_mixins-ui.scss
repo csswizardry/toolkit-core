@@ -5,6 +5,21 @@
 // Panel Indicator
 // ===========================================
 
+// The panel indicator should be applied to an element when the associated panel
+// is open. It is convention to use a state class such as `.is-selected`.
+
+// Example usage:
+
+// Light Panel theme:
+//  .c-component.is-selected {
+//    @include panel-indicator();
+//  }
+
+// Dark Panel theme:
+//  .c-component.c-component--dark.is-selected {
+//    @include panel-indicator("dark");
+//  }
+
 // Adds panel indicator to show relationship with element that opened it.
 @mixin panel-indicator($theme: "default") {
   $indicator-arrow-size: 22px !default;
