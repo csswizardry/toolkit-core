@@ -1,7 +1,7 @@
 # Toolkit Core v1.1.0
 
 ## 1. Features
-- [mixins-ui] `panel-indicator` extracted from tile to a mixin so can now be used on any elements.
+- [mixins-ui] `panel-indicator` extracted from tile to a mixin so can now be used on any elements. Use `@include panel-indicator();` for the default light panel or `@include panel-indicator("dark");` for the dark panel theme.
 
 ===
 
