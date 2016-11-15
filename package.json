@@ -1,6 +1,6 @@
 {
   "name": "sky-toolkit-core",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "The core of Sky's CSS Toolkit",
   "main": "index.js",
   "scripts": {

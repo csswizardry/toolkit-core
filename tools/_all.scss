@@ -9,6 +9,7 @@
  *                      throughout the rest of the project.
  * Functions............A collection of custom Sass functions.
  * Mixins...............A collection of custom Sass mixins.
+ * Mixins UI............A collection of custom Sass mixins supporting UI components.
  * Typography...........Mixins specifically for helping with setting type.
  * Gradients............Mixins specifically for helping with creating gradients.
  * Divider..............Mixins specifically for helping with creating styles
@@ -20,6 +21,7 @@
 @import "../../sass-mq/mq";
 @import "functions";
 @import "mixins";
+@import "mixins-ui";
 @import "typography";
 @import "gradients";
 @import "divider";
