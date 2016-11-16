@@ -2,10 +2,71 @@
    UTILITIES / HIDE
    ========================================================================== */
 
+/**
+ * Hide visually - still readable by screenreaders & assistive technologies
+ */
 .u-hide-visually {
   @include hide-visually();
 }
 
+/**
+ * Only hide at defined screen sizes
+ */
+@include mq($until:medium) {
+  .u-hide-visually\@small {
+    @include hide-visually();
+  }
+}
+
+@include mq($from: medium, $until:large) {
+  .u-hide-visually\@medium {
+    @include hide-visually();
+  }
+}
+
+@include mq($from:large, $until:x-large) {
+  .u-hide-visually\@large {
+    @include hide-visually();
+  }
+}
+
+@include mq($from:x-large) {
+  .u-hide-visually\@x-large {
+    @include hide-visually();
+  }
+}
+
+/**
+ * Hide completely - remove vsually and render un-readable by screen readers & assistive technologies
+ */
+
 .u-hide-completely {
   @include hide-completely();
+}
+
+/**
+ * Only hide at defined screen sizes
+ */
+@include mq($until:medium) {
+  .u-hide-completely\@small {
+    @include hide-completely();
+  }
+}
+
+@include mq($from: medium, $until:large) {
+  .u-hide-completely\@medium {
+    @include hide-completely();
+  }
+}
+
+@include mq($from:large) {
+  .u-hide-completely\@large {
+    @include hide-completely();
+  }
+}
+
+@include mq($from:x-large) {
+  .u-hide-completely\@x-large {
+    @include hide-completely();
+  }
 }
