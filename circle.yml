@@ -10,3 +10,9 @@ general:
 test:
   override:
     - npm run test-circle
+
+experimental:
+  notify:
+    branches:
+      only:
+        - master
