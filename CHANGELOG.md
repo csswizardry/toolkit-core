@@ -1,4 +1,4 @@
-# Toolkit Core v1.1.1
+# Toolkit Core v1.2.0
 
 ## 1. Bug Fixes
 - [mixins] import `sass-mq` as a module.
