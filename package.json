@@ -1,6 +1,6 @@
 {
   "name": "sky-toolkit-core",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "The core of Sky's CSS Toolkit",
   "main": "index.js",
   "scripts": {
@@ -32,5 +32,8 @@
     "stylelint": "^5.2.1",
     "stylelint-selector-bem-pattern": "^0.2.1",
     "stylelint-statement-max-nesting-depth": "^2.0.1"
+  },
+  "devDependencies": {
+    "eyeglass": "^1.1.2"
   }
 }

@@ -1,3 +1,10 @@
+# Toolkit Core v1.2.0
+
+## 1. Dependencies
+- [[Eyeglass]](https://github.com/sass-eyeglass/eyeglass) provide support for Eyeglass build tools. Fixes problems with importing nested `node_module` scss dependencies.
+
+===
+
 # Toolkit Core v1.1.0
 
 ## 1. Features
