@@ -42,6 +42,10 @@
     box-shadow: 0 1px 3px rgba(color(black), 0.75), 0 1px 15px 3px rgba(color(white), 0.75);
   }
 
+  @elseif ($color == "reduced") {
+    box-shadow: 0 1px 3px rgba(color(black), 0.4), 0 1px 6px 3px rgba(color(highlight), 0.75);
+  }
+
   @else {
     @warn "`#{$color}` is not a valid outline color, it must be `default` or `invert`.";
   }
