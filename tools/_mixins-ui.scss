@@ -40,7 +40,7 @@
 
   margin-bottom: $global-spacing-unit;
   position: relative;
-  z-index: 10;
+  z-index: z-index(over-content);
 
   &::before,
   &::after {

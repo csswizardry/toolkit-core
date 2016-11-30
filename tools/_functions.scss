@@ -56,6 +56,26 @@
   @return null;
 }
 
+// $z-index map reader
+// ===========================================
+
+// Function to get z-index values instead of using nested `map-gets`.
+//
+// Usage:
+//
+//   .foo {
+//     z-index: z-index(<key>);
+//   }
+//
+@function z-index($key) {
+  @if map-has-key($z-index, $key) {
+    @return map-get($z-index, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $z-index.";
+  @return null;
+}
+
 // Strip units
 // ===========================================
 

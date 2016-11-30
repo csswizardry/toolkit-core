@@ -1,0 +1,25 @@
+// =============================================================================
+// SETTINGS / Z-INDEX
+// =============================================================================
+
+// Our z-index values are held in maps for ease of use.
+// Access these values using:
+//
+//   z-index($KEY)
+//
+// For example:
+//
+//   .foo {
+//     z-index: z-index(content);
+//   }
+
+$z-index: (
+  under-control:   -200,
+  under-content:   -100,
+  content:         0,
+  over-content:    100,
+  over-control:    200,
+  over-page:       300,
+  over-screen:     400,
+  over-everything: 500,
+) !default;

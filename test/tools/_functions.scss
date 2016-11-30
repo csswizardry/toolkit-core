@@ -26,6 +26,10 @@
   $colors: (
     testColor: #bada55
   ) !global;
+
+  $z-index: (
+    testKey: 100
+  ) !global;
 }
 
 // $text map reader
@@ -110,6 +114,20 @@
   @include test("should return a hex value for given key") {
     $actual: color("testColor");
     $expected: #bada55;
+
+    @include assert-equal($actual, $expected);
+  }
+}
+
+// $z-index map reader
+// ===========================================
+
+@include test-module("@function z-index") {
+  @include functions_before();
+
+  @include test("should return a z-index value for given key") {
+    $actual: z-index("testKey");
+    $expected: 100;
 
     @include assert-equal($actual, $expected);
   }
