@@ -2,17 +2,25 @@
    LAYER / #FILENAME
    ========================================================================== */
 
+// Filename Settings
+// Common values should be stored in file-specific variables here.
+// 1. Provide line-comments like this.
+$filename-color: #bada55; // 1
+
+/* Sub-heading (e.g. Base, States, Modifiers)
+   =========================================== */
+
 /**
- * Long-form comment.
+ * Class heading
  *
+ * Note: `X` should be replaced with the appropriate layer namespace.
+ *
+ * Long-form comment.
  * This spans multiple lines and is also constrained to no longer than 80
  * characters in width.
  *
  * 1. Provide line-comments like this.
  */
-.X-class {
-  color: red; /* [1] */
+.X-filename {
+  color: $filename-color; /* [1] */
 }
-
-/* Sub-heading
-   =========================================== */
