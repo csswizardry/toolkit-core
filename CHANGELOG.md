@@ -1,3 +1,14 @@
+# Toolkit Core v1.3.0
+
+## 1. Features
+- [tools] Added `z-index()` function for more maintainable z-index across the project. Accessed from ⬇
+- [settings] `$z-index` map, containing a range of values for greater consistency.
+
+## 2. Enhancements
+- [template] Further comments on coding-style.
+
+===
+
 # Toolkit Core v1.2.0
 
 ## 1. Dependencies
@@ -66,6 +77,7 @@
 ## 2. Deprecations
 - [legacy-typography] We removed the previous typographic variables in favour of a responsive approach. To deprecate gracefully, a toggle variable has been provided in settings/config. To continue using the previous classes set `$legacy-typography: true;` at the very top of your sass import, before toolkit-core.
 
+===
 
 # Toolkit Core v0.4.0
 
@@ -75,6 +87,7 @@
 ## 2. Deprecations
 - [sass-deprecate] We removed the sass-deprecate library in favour of changelogs and improved release notes
 
+===
 
 # Toolkit Core v0.3.15
 
@@ -83,7 +96,6 @@
 - [utilities] Added `tiny` variation to the spacing utility
 - [tools] Added `radial` to the `background-gradient` mixin
 - [settings] Added `ui-mid` to the `colors` map
-
 
 ## 2. Bug Fixes
 - [layout] Fixed margin left on `o-layout--narrow`
