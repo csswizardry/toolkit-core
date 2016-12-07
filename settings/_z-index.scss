@@ -14,12 +14,12 @@
 //   }
 
 $z-index: (
-  under-control:   -200,
-  under-content:   -100,
+  under-control:   -40,
+  under-content:   -20,
   content:         0,
-  over-content:    100,
-  over-control:    200,
-  over-page:       300,
-  over-screen:     400,
-  over-everything: 500,
+  over-content:    20,
+  over-control:    40,
+  over-page:       60,
+  over-screen:     80,
+  over-everything: 100,
 ) !default;
