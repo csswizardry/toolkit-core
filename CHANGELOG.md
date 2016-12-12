@@ -1,3 +1,10 @@
+# Toolkit Core v1.3.0
+
+## 1. Dependencies
+- [[Stylelint]](http://stylelint.io) Update to latest Stylelint; allowing for further modification of `.stylelintrc` at a later date.
+
+===
+
 # Toolkit Core v1.2.0
 
 ## 1. Dependencies
