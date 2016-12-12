@@ -7,12 +7,21 @@
 // Test config
 // ===========================================
 
+@mixin mixins-ui_before {
+  $colors: (
+    grey-50: #222,
+    black: #000,
+    white: #fff
+  ) !global;
+}
+
 // Add Panel Indicator to element
 // ===========================================
 
 // *Issue with mixins returning pseudo element styling incorrectly*
 
 @include test-module("@mixin panel-indicator") {
+  @include mixins-ui_before();
 
   @include test("adds panel indicator") {
     @include assert("sets default theme by default") {
@@ -32,6 +41,7 @@
       }
 
       @include expect {
+        background-color: #222;
         box-shadow: inset 11px 11px 11px -11px #000;
       }
     }
