@@ -2,6 +2,9 @@
    UTILITIES / DEFENCE
    ========================================================================== */
 
+/* Defence styles need to fully override existing legacy styles */
+/* stylelint-disable selector-no-id, declaration-no-important  */
+
 /**
  * Sets classic-masthead sass-mq breakpoint.
  */
@@ -66,3 +69,5 @@
     max-width: 1140px !important;
   }
 }
+
+/* stylelint-enable */
