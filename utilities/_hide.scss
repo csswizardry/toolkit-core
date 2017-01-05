@@ -7,9 +7,9 @@
  */
 
 @mixin hide-visually-element($widths-breakpoint) {
-    .u-hide-visually#{$widths-breakpoint} {
-      @include hide-visually();
-    }
+  .u-hide-visually#{$widths-breakpoint} {
+    @include hide-visually();
+  }
 }
 
 /**

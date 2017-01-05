@@ -7,7 +7,7 @@
     "test": "./node_modules/mocha/bin/mocha ./test/sass.js",
     "test-circle": "npm run build && npm run test",
     "lint": "stylelint ./**/*.scss --syntax scss",
-    "build": "mkdir build && cat _all.scss | node-sass --include-path node_modules/ --output-style nested --precision 9 > build/toolkit-core.css"
+    "build": "mkdir build && cat _all.scss | node-sass --include-path node_modules/ --output-style compressed --precision 9 > build/toolkit-core.css"
   },
   "pre-commit": [
     "lint",
