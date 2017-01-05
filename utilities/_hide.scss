@@ -5,34 +5,26 @@
 /**
  * Hide visually - still readable by screenreaders & assistive technologies
  */
-.u-hide-visually {
-  @include hide-visually();
+
+@mixin hide-visually-element($widths-column, $widths-breakpoint: null) {
+  @each $widths-denominator in $widths-column {
+    @for $widths-numerator from 1 through $widths-denominator {
+      .u-hide-visually-#{$widths-numerator}\/#{$widths-denominator}#{$widths-breakpoint} {
+        @include hide-visually();
+      }
+    }
+  }
 }
+
+@include hide-visually-element(1 2 3 4 5);
 
 /**
  * Only hide at defined screen sizes
  */
-@include mq($until:medium) {
-  .u-hide-visually\@small {
-    @include hide-visually();
-  }
-}
 
-@include mq($from: medium, $until:large) {
-  .u-hide-visually\@medium {
-    @include hide-visually();
-  }
-}
-
-@include mq($from:large, $until:x-large) {
-  .u-hide-visually\@large {
-    @include hide-visually();
-  }
-}
-
-@include mq($from:x-large) {
-  .u-hide-visually\@x-large {
-    @include hide-visually();
+@each $alias, $bp in $mq-breakpoints {
+  @include mq($from: $bp) {
+    @include hide-visually-element(1 2 3 4 5, \@#{$alias});
   }
 }
 
@@ -40,33 +32,24 @@
  * Hide completely - remove vsually and render un-readable by screen readers & assistive technologies
  */
 
-.u-hide-completely {
-  @include hide-completely();
+@mixin hide-completely-element($widths-column, $widths-breakpoint: null) {
+  @each $widths-denominator in $widths-column {
+    @for $widths-numerator from 1 through $widths-denominator {
+      .u-hide-completely-#{$widths-numerator}\/#{$widths-denominator}#{$widths-breakpoint} {
+        @include hide-completely();
+      }
+    }
+  }
 }
+
+@include hide-completely-element(1 2 3 4 5);
 
 /**
  * Only hide at defined screen sizes
  */
-@include mq($until:medium) {
-  .u-hide-completely\@small {
-    @include hide-completely();
-  }
-}
 
-@include mq($from: medium, $until:large) {
-  .u-hide-completely\@medium {
-    @include hide-completely();
-  }
-}
-
-@include mq($from:large) {
-  .u-hide-completely\@large {
-    @include hide-completely();
-  }
-}
-
-@include mq($from:x-large) {
-  .u-hide-completely\@x-large {
-    @include hide-completely();
+@each $alias, $bp in $mq-breakpoints {
+  @include mq($from: $bp) {
+    @include hide-completely-element(1 2 3 4 5, \@#{$alias});
   }
 }
