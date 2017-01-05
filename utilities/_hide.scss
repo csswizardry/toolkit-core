@@ -6,17 +6,11 @@
  * Hide visually - still readable by screenreaders & assistive technologies
  */
 
-@mixin hide-visually-element($widths-column, $widths-breakpoint: null) {
-  @each $widths-denominator in $widths-column {
-    @for $widths-numerator from 1 through $widths-denominator {
-      .u-hide-visually-#{$widths-numerator}\/#{$widths-denominator}#{$widths-breakpoint} {
-        @include hide-visually();
-      }
+@mixin hide-visually-element($widths-breakpoint) {
+    .u-hide-visually#{$widths-breakpoint} {
+      @include hide-visually();
     }
-  }
 }
-
-@include hide-visually-element(1 2 3 4 5);
 
 /**
  * Only hide at defined screen sizes
@@ -24,7 +18,7 @@
 
 @each $alias, $bp in $mq-breakpoints {
   @include mq($from: $bp) {
-    @include hide-visually-element(1 2 3 4 5, \@#{$alias});
+    @include hide-visually-element(\@#{$alias});
   }
 }
 
@@ -32,17 +26,11 @@
  * Hide completely - remove vsually and render un-readable by screen readers & assistive technologies
  */
 
-@mixin hide-completely-element($widths-column, $widths-breakpoint: null) {
-  @each $widths-denominator in $widths-column {
-    @for $widths-numerator from 1 through $widths-denominator {
-      .u-hide-completely-#{$widths-numerator}\/#{$widths-denominator}#{$widths-breakpoint} {
-        @include hide-completely();
-      }
-    }
+@mixin hide-completely-element($widths-breakpoint) {
+  .u-hide-completely#{$widths-breakpoint} {
+    @include hide-completely();
   }
 }
-
-@include hide-completely-element(1 2 3 4 5);
 
 /**
  * Only hide at defined screen sizes
@@ -50,6 +38,6 @@
 
 @each $alias, $bp in $mq-breakpoints {
   @include mq($from: $bp) {
-    @include hide-completely-element(1 2 3 4 5, \@#{$alias});
+    @include hide-completely-element(\@#{$alias});
   }
 }
