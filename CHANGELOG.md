@@ -1,3 +1,10 @@
+# Toolkit Core v1.4.0
+
+## 1. Dependencies
+- [[sky-css-lint]](https://github.com/sky-uk/css) Use sky-css-lint for CSS / Sass linting.
+
+===
+
 # Toolkit Core v1.3.0
 
 ## 1. Dependencies
