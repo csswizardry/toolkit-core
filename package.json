@@ -29,7 +29,7 @@
     "pre-commit": "^1.1.2",
     "sass-mq": "^3.2.6",
     "sass-true": "2.0.3",
-    "sky-css-lint": "0.2.0"
+    "sky-css-lint": "1.0.0"
   },
   "devDependencies": {
     "eyeglass": "^1.1.2"
