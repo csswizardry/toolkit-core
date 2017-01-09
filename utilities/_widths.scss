@@ -37,6 +37,9 @@
 // Basically, we just call the mixin again but inside of a breakpoint of our
 // choosing, and with the additional responsive suffix (e.g. `\@large`).
 
+/* Width utilities will override any matching property declarations */
+/* stylelint-disable declaration-no-important */
+
 @mixin widths($widths-columns, $widths-breakpoint: null) {
 
   // Loop through the number of columns for each denominator of our fractions.
@@ -92,3 +95,4 @@
   }
 }
 
+/* stylelint-enable declaration-no-important */

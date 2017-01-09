@@ -12,6 +12,9 @@
  *   .u-padding-all {}
  */
 
+/* Spacing utilities will override any matching property declarations */
+/* stylelint-disable declaration-no-important */
+
 $global-spacing-directions: (
   null,
   -top,
@@ -59,3 +62,5 @@ $global-spacing-sizes: (
   }
 
 }
+
+/* stylelint-enable */

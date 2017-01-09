@@ -65,6 +65,8 @@
 // Visually hide content, leaving it accessible to screenreaders and ATs.
 // http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
 @mixin hide-visually() {
+  /* Hiding elements visually overrides any matching property declarations */
+  /* stylelint-disable declaration-no-important */
   border: 0 !important;
   clip: rect(0 0 0 0) !important;
   height: 1px !important;
@@ -73,12 +75,16 @@
   padding: 0 !important;
   position: absolute !important;
   width: 1px !important;
+  /* stylelint-enable */
 }
 
 // Completely hide content both visually from the screen, and from screenreaders
 // and ATs.
 @mixin hide-completely() {
+  /* Hiding elements completely overrides any matching property declarations */
+  /* stylelint-disable declaration-no-important */
   display: none !important;
+  /* stylelint-enable */
 }
 
 // Clearfix mixin for use later in the project
